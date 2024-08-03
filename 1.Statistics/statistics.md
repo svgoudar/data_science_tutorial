@@ -110,3 +110,49 @@
 ## Conclusion
 
 Understanding both descriptive and inferential statistics is crucial for making informed decisions based on data. Using various sampling techniques ensures that the data collected is representative and reliable. Throughout this course, we will dive deep into these concepts and apply them using Python, enabling you to tackle real-world data science problems efficiently. Let's start our journey by understanding the fundamental concepts of statistics!
+
+
+## Variables
+
+### What is a Variable?
+A variable is a property that can take on any value. For example, height and weight are variables. They can have values like 170 cm, 172 cm, 185 cm, 190 cm for height and values like 78 kg, 99 kg, 100 kg, 60 kg, 50 kg for weight. 
+
+### Types of Variables
+There are two kinds of variables:
+
+1. **Quantitative Variables**
+2. **Qualitative (Categorical) Variables**
+
+#### Quantitative Variables
+Quantitative variables can be measured numerically. We can perform various operations like addition, subtraction, division, and multiplication on them. Examples include:
+
+- Age
+- Weight
+- Height
+
+Quantitative variables can be further divided into two types:
+
+1. **Discrete Variables:** These can only take whole numbers.
+    - Examples: Number of bank accounts, number of children in a family.
+
+2. **Continuous Variables:** These can take any numerical value.
+    - Examples: Height, weight, amount of rainfall.
+
+#### Qualitative (Categorical) Variables
+Qualitative variables are based on characteristics and cannot be measured numerically. We cannot perform mathematical operations on them. Examples include:
+
+- Gender (male, female)
+- IQ categories (0-10: less IQ, 10-50: medium IQ, 50-100: good IQ)
+- Blood group (A positive, A negative)
+- T-shirt size (large, XL, medium, small)
+
+### Examples of Variable Types
+- **Gender:** Qualitative or categorical
+- **Marital Status:** Qualitative or categorical
+- **River Length:** Quantitative (continuous)
+- **Population of a State:** Quantitative (discrete)
+- **Song Length:** Quantitative (continuous)
+- **Blood Pressure:** Quantitative (continuous)
+- **Pin Code:** Discrete or categorical
+
+Understanding the types of variables is crucial for handling them appropriately in data science problems.
