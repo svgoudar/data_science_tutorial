@@ -82,8 +82,8 @@
 
 ### Population and Sample
 
-- Population: The entire group being studied, denoted by \( N \).
-- Sample: A subset of the population, denoted by \( n \).
+- Population: The entire group being studied, denoted by$N$.
+- Sample: A subset of the population, denoted by$n$.
 - Example: Conducting an exit poll by surveying a sample of voters to infer the preferences of the entire population.
 
 ## Sampling Techniques
@@ -365,41 +365,41 @@ It refers to the measure used to determine the central part of the distribution 
   $$
   \mu = \frac{\sum_{i=1}^{N} x_i}{N}
   $$
-  Where \( N \) is the total number of values in the population.
-- **Sample Mean ( \( \bar{x} \) )**:
+  Where$N$ is the total number of values in the population.
+- **Sample Mean ($\bar{x}$ )**:
   $$
   \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}
   $$
-  Where \( n \) is the number of values in the sample.
+  Where$n$ is the number of values in the sample.
 
 **Example**:
-Given the dataset: \( 3, 3, 4, 5, 5, 6\} \)
+Given the dataset:$3, 3, 4, 5, 5, 6\}$
 
-- Sum of values: \( 3 + 3 + 4 + 5 + 5 + 6 = 26 \)
+- Sum of values:$3 + 3 + 4 + 5 + 5 + 6 = 26$
 - Number of values: 6
-- Mean: \( \frac{26}{6} = 4.33 \)
+- Mean:$\frac{26}{6} = 4.33$
 
 ### Median
 
 **Definition**: The median is the middle value in a dataset when arranged in ascending order. If the number of values is even, it is the average of the two middle numbers.
 
 **Example**:
-Given the dataset: \( $$1, 1, 2, 2, 3, 3, 4, 5, 5, 6\} \)
+Given the dataset:$$$1, 1, 2, 2, 3, 3, 4, 5, 5, 6\}$
 
-- Median: \( 3 \)
+- Median:$3$
 
-If an outlier (e.g., 100) is added: \( $$1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 100\} \)
+If an outlier (e.g., 100) is added:$$$1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 100\}$
 
-- Median: \( \frac{3 + 4}{2} = 3.5 \)
+- Median:$\frac{3 + 4}{2} = 3.5$
 
 ### Mode
 
 **Definition**: The mode is the value that appears most frequently in a dataset.
 
 **Example**:
-Given the dataset: \( $$1, 2, 2, 3, 4, 5, 6, 6, 6, 7, 8\} \)
+Given the dataset:$$$1, 2, 2, 3, 4, 5, 6, 6, 6, 7, 8\}$
 
-- Mode: \( 6 \)
+- Mode:$6$
 
 **Usage**:
 Mode is often used for categorical data. For instance, in a dataset of flower types, the mode would be the flower type that appears most frequently.
@@ -412,9 +412,9 @@ These concepts measure the spread or variability of the dataset.
 
 ### Example
 
-Given the dataset: \( $$1, 2, 2, 3, 4, 5, 6\} \)
+Given the dataset:$$$1, 2, 2, 3, 4, 5, 6\}$
 
-- Range: \( 6 - 1 = 5 \)
+- Range:$6 - 1 = 5$
 - Variance and standard deviation calculations can be performed using appropriate formulas or software tools.
 
 ## 3. Gaussian Distribution (Normal Distribution)
@@ -634,8 +634,8 @@ $$ \text{IQR} = Q3 - Q1 $$
 
 To detect outliers, we define:
 
-- Lower fence: \( Q1 - 1.5 \times \text{IQR} \)
-- Upper fence: \( Q3 + 1.5 \times \text{IQR} \)
+- Lower fence:$Q1 - 1.5 \times \text{IQR}$
+- Upper fence:$Q3 + 1.5 \times \text{IQR}$
 
 Values outside this range are considered outliers.
 
@@ -651,8 +651,8 @@ Using the dataset `[1, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 6, 6, 7, 8, 8, 9, 27]`:
 $$ \text{IQR} = 7 - 3 = 4 $$
 
 3. Calculate fences:
-   - Lower fence = \( 3 - 1.5 \times 4 = -3 \)
-   - Upper fence = \( 7 + 1.5 \times 4 = 13 \)
+   - Lower fence =$3 - 1.5 \times 4 = -3$
+   - Upper fence =$7 + 1.5 \times 4 = 13$
 
 4. Identify outliers: Any value outside \([-3, 13]\). Thus, 27 is an outlier.
 
@@ -781,6 +781,8 @@ The Z-score tells us how many standard deviations an element is from the mean. A
 
 ### Visualization
 
+![alt text](image.png)
+
 - **2021 Series**: Mean = 250, Standard Deviation = 10
   - 240 falls at -1 standard deviation
 - **2020 Series**: Mean = 260, Standard Deviation = 12
@@ -788,10 +790,276 @@ The Z-score tells us how many standard deviations an element is from the mean. A
 
 From this, we infer that the team performed relatively better in 2021 than in 2020 based on the Z-scores.
 
+Alright, let's break down the practical example of calculating the percentage of scores that fall above a given value using the Z-score, with an explanation and Python code to illustrate the process.
 
+### Problem Statement
 
+You have a dataset with the following values:
+\[4, 5, 6, 7, 3, 2, 1$$
+The mean of this dataset is 4, and the standard deviation is 1. You need to find the percentage of scores that are greater than 4.25.
 
-```python exec='on'
-@
+### Step-by-Step Solution
 
+1. **Calculate the Z-Score:**
+   The Z-score formula is given by:
+   $$
+   Z = \frac{X - \mu}{\sigma}
+   $$
+   where$X$ is the value (4.25),$\mu$ is the mean (4), and$\sigma$ is the standard deviation (1).
+
+   So,
+   $$
+   Z = \frac{4.25 - 4}{1} = 0.25
+   $$
+
+2. **Find the Area to the Right of the Z-Score:**
+   We need to find the area under the standard normal curve to the right of the Z-score (0.25). This can be found using Z-tables or a standard normal distribution function in Python.
+
+3. **Calculate the Percentage:**
+   The area to the right of the Z-score gives us the percentage of scores that fall above 4.25.
+
+### Implementation in Python
+![alt text](image-1.png)
+Let's implement this in Python to make it more concrete:
+
+```python
+import numpy as np
+import scipy.stats as stats
+
+# Given data
+mean = 4
+std_dev = 1
+x_value = 4.25
+
+# Calculate Z-score
+z_score = (x_value - mean) / std_dev
+
+# Find the area to the right of the Z-score using the cumulative distribution function (CDF)
+area_to_right = 1 - stats.norm.cdf(z_score)
+
+# Convert to percentage
+percentage = area_to_right * 100
+
+print(f"Percentage of scores above {x_value}: {percentage:.2f}%")
 ```
+
+### Explanation of the Code
+
+1. **Calculate the Z-Score:**
+   $$
+   z\_score = \frac{x\_value - mean}{std\_dev}
+   $$
+
+2. **Calculate the Cumulative Distribution Function (CDF):**
+   The `stats.norm.cdf(z_score)` function gives the cumulative probability up to the Z-score. We subtract this value from 1 to get the area to the right of the Z-score.
+
+3. **Convert to Percentage:**
+   Multiply the area to the right by 100 to get the percentage.
+
+### Understanding the Result
+
+The percentage of scores above 4.25 in the given dataset is approximately 40%. This means that 40% of the scores in the dataset are greater than 4.25.
+
+This method is widely used in statistics, especially in hypothesis testing and confidence interval estimation, making it an essential concept for both academic purposes and practical applications in data analysis.
+
+
+# Probability
+
+Probability is super important and widely used in machine learning, deep learning, and many other fields. In this session, we'll discuss major concepts and applications of probability.
+
+## Definition
+
+Probability is a measure of the likelihood of an event. To understand probability, consider the following examples:
+
+### Example 1: Rolling a Die
+
+When rolling a die, the possible outcomes are \(1, 2, 3, 4, 5, 6\). If we want to find the probability of getting a 6, we can use the formula:
+
+$$P(\text{Event}) = \frac{\text{Number of ways an event can occur}}{\text{Number of possible outcomes}} $$
+
+Here, the number of ways to get a 6 is 1, and the number of possible outcomes is 6. Therefore:
+
+$$P(6) = \frac{1}{6} $$
+
+### Example 2: Tossing a Coin
+
+When tossing a coin, the possible outcomes are heads (H) and tails (T). The probability of getting heads is:
+
+$$P(H) = \frac{1}{2} $$
+
+## Addition Rule
+
+The addition rule is used to find the probability of either of two events occurring. It comes in two forms:
+
+1. **Mutually Exclusive Events**: Events that cannot occur at the same time.
+2. **Non-Mutually Exclusive Events**: Events that can occur at the same time.
+
+### Mutually Exclusive Events
+
+If two events are mutually exclusive, the probability of either event occurring is the sum of their individual probabilities:
+
+$$P(A \text{ or } B) = P(A) + P(B) $$
+
+#### Example: Tossing a Coin
+
+If we want to find the probability of getting heads or tails, we use:
+
+$$P(H \text{ or } T) = P(H) + P(T) = \frac{1}{2} + \frac{1}{2} = 1 $$
+
+### Non-Mutually Exclusive Events
+
+For non-mutually exclusive events, we need to subtract the probability of both events occurring:
+
+$$P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B) $$
+
+#### Example: Drawing a Card
+
+Consider a deck of cards. What is the probability of drawing a queen or a heart?
+
+- $P(\text{Queen}) = \frac{4}{52}$
+-$P(\text{Heart}) = \frac{13}{52}$
+-$P(\text{Queen and Heart}) = \frac{1}{52}$
+
+So,
+
+$$ P(\text{Queen or Heart}) = \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} $$
+
+## Multiplication Rule
+
+The multiplication rule is used to find the probability of both of two events occurring. It comes in two forms:
+
+1. **Independent Events**: The occurrence of one event does not affect the occurrence of the other.
+2. **Dependent Events**: The occurrence of one event affects the occurrence of the other.
+
+### Independent Events
+
+For independent events, the probability of both events occurring is the product of their individual probabilities:
+
+$P(A \text{ and } B) = P(A) \times P(B)$
+
+#### Example: Rolling a Die
+
+What is the probability of rolling a 5 and then a 4?
+
+$P(5 \text{ and } 4) = P(5) \times P(4) = \frac{1}{6} \times \frac{1}{6} = \frac{1}{36}$
+
+### Dependent Events
+
+For dependent events, the probability of both events occurring is:
+
+$P(A \text{ and } B) = P(A) \times P(B|A)$
+
+Where $P(B|A)$is the conditional probability of $B$ given $A$.
+
+#### Example: Drawing Cards
+
+What is the probability of drawing a queen and then an ace from a deck of cards?
+
+- $P(\text{Queen}) = \frac{4}{52}$
+- After drawing a queen, $P(\text{Ace}) = \frac{4}{51}$
+
+So,
+
+$$ P(\text{Queen and Ace}) = \frac{4}{52} \times \frac{4}{51} = \frac{16}{2652} = \frac{4}{663} $$
+
+## Permutation and Combination
+
+Permutation and combination are used to calculate the number of ways to arrange or select items.
+
+### Permutation
+
+Permutation is used when the order of items matters.
+
+#### Example: Arranging Chocolates
+
+If there are 6 different chocolates, and we want to know the number of ways to arrange the first 3:
+
+$$ P(n, r) = \frac{n!}{(n-r)!} = \frac{6!}{(6-3)!} = 6 \times 5 \times 4 = 120 $$
+
+### Combination
+
+Combination is used when the order of items does not matter.
+
+#### Example: Selecting Chocolates
+
+If we want to select 3 chocolates out of 6:
+
+$$ C(n, r) = \frac{n!}{r!(n-r)!} = \frac{6!}{3!(6-3)!} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20 
+$$
+
+
+Sure, let's break down and clarify the concepts of permutations, combinations, and then delve into p-values and hypothesis testing.
+
+### Permutations and Combinations
+
+#### Permutations:
+Permutations refer to the arrangement of objects in a specific order. The order of elements is significant. For example, if you have three elements A, B, and C, the permutations would include ABC, ACB, BAC, BCA, CAB, and CBA.
+
+The formula to calculate permutations of $n$items taken $r$at a time is:
+$$P(n, r) = \frac{n!}{(n-r)!}$$
+
+#### Combinations:
+Combinations refer to the selection of objects where the order does not matter. For example, if you have three elements A, B, and C, the combinations would include AB, AC, and BC.
+
+The formula to calculate combinations of $n$items taken $r$at a time is:
+$$C(n, r) = \frac{n!}{r!(n-r)!}$$
+
+**Example with repeated elements:**
+If you have items: Dairy Milk, Gems, Gems, and Eclairs. Each combination must be unique and the order does not matter.
+
+### P-Value and Hypothesis Testing
+
+#### P-Value:
+The p-value is a measure of the probability that an observed difference could have occurred just by random chance. For example, if the p-value is 0.05, there's a 5% chance that the observed difference is due to randomness.
+
+#### Hypothesis Testing:
+Hypothesis testing is a method used to decide whether there is enough evidence to reject a null hypothesis, based on sample data.
+
+1. **Null Hypothesis ($H_0$):** The default assumption (e.g., "the coin is fair").
+2. **Alternative Hypothesis ($H_a$):** The opposite of the null hypothesis (e.g., "the coin is not fair").
+
+**Steps:**
+1. **Define the null and alternative hypotheses.**
+2. **Perform the experiment and collect data.**
+3. **Calculate the p-value or test statistic.**
+4. **Compare the p-value to a significance level ($\alpha$).**
+   - If $p \leq \alpha$, reject the null hypothesis.
+   - If $p > \alpha$, do not reject the null hypothesis.
+
+**Example: Testing a Fair Coin**
+- Null Hypothesis $H_0$: The coin is fair ($\text{heads}) = 0.5$).
+- Alternative Hypothesis $H_a$: The coin is not fair ($\text{heads}$) $\neq 0.5$\)).
+
+1. **Conduct 100 coin tosses.**
+2. **Calculate the observed number of heads.**
+3. **Determine the mean and standard deviation for a fair coin.**
+4. **Compute the confidence interval.**
+   - Typically, for a significance level $\alpha = 0.05$, the confidence interval is 95%.
+5. **Compare the observed result to the confidence interval:**
+   - If the observed number of heads falls within the confidence interval, do not reject $H_0$.
+   - If the observed number falls outside, reject $H_0$.
+
+**Significance Level ($\alpha$) and Confidence Interval:**
+- $\alpha = 0.05$: 95% confidence interval.
+- $\alpha = 0.20$: 80% confidence interval.
+
+#### Practical Example:
+
+**Assume:**
+- Mean (expected number of heads in 100 tosses): 50
+- Standard deviation: 10
+
+If the observed number of heads is 30:
+- **Check against the 95% confidence interval (mean ± 1.96 * std dev).**
+- **30 is outside the 95% confidence interval (20, 80).**
+- Therefore, reject $H_0$.
+
+If the observed number of heads is 70:
+- **70 is inside the 95% confidence interval (20, 80).**
+- Therefore, do not reject $H_0$.
+
+**Adjusting Significance Level:**
+- With $\alpha = 0.20$, the 80% confidence interval is narrower.
+- Observations falling outside this interval (e.g., 10 or 90 heads) would lead to rejecting $H_0$.
+
+This approach helps determine whether observed data supports the null hypothesis or suggests an alternative.
