@@ -520,7 +520,7 @@ Standard deviation is the square root of the variance, providing a measure of di
 
 ### Example Calculation
 
-Let's consider a dataset: $$1, 2, 2, 3, 4, 5$$.
+Let's consider a dataset: 1, 2, 2, 3, 4, 5
 
 1. **Calculate the Mean ($\bar{x}$)**:
    $$
@@ -586,7 +586,7 @@ Percentiles, on the other hand, are a bit more specific. A percentile is a value
 
 #### Formula for Percentile Rank
 
-To find the percentile rank of a given value `X` in a dataset, we use:
+To find the perce ntile rank of a given value `X` in a dataset, we use:
 
 $$ \text{Percentile rank} = \left(\frac{\text{Number of values below } X}{\text{Total number of values}}\right) \times 100 $$
 
@@ -787,3 +787,11 @@ The Z-score tells us how many standard deviations an element is from the mean. A
   - 245 falls at -1.25 standard deviations
 
 From this, we infer that the team performed relatively better in 2021 than in 2020 based on the Z-scores.
+
+
+
+
+```python exec='on'
+@
+
+```
