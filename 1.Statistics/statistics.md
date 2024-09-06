@@ -1,7 +1,6 @@
 ## Topics to Cover
 
 **Descriptive Statistics vs. Inferential Statistics**
-
 **Descriptive statistics**: Summarizing data (e.g., measures of central tendency, measures of dispersion, histograms, box plots).
 
 **Inferential statistics**: Making predictions or inferences about a population based on a sample (e.g., z-test, t-test, ANOVA, chi-square test).
@@ -347,75 +346,219 @@ In this session, we will cover intermediate statistical concepts crucial for dat
 4. Z Score
 5. Standard Normal Distribution
 
-## 1. Measure of Central Tendency
+## Measure of central tendency
 
-### Definition
+### 1. **Mean (Arithmetic Average)**
 
-It refers to the measure used to determine the central part of the distribution of the data
+#### **Definition**
 
-### Arithmetic Mean (Average)
+The mean is the sum of all values divided by the number of values.
 
-**Definition**: The mean is the sum of all values divided by the number of values.
+#### **Formula**
 
-#### Formulas
+- For a population:
+     $$ \mu = \frac{\sum x_i}{N} $$
 
- ![1722749467822.png](./1722749467822.png)
+- For a sample:  
+ $$ \bar{x} = \frac {\sum x_i}{n}  $$
 
-- **Population Mean (μ)**:
-  $$
-  \mu = \frac{\sum_{i=1}^{N} x_i}{N}
-  $$
-  Where$N$ is the total number of values in the population.
-- **Sample Mean ($\bar{x}$ )**:
-  $$
-  \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}
-  $$
-  Where$n$ is the number of values in the sample.
+#### **Application**
 
-**Example**:
-Given the dataset:$3, 3, 4, 5, 5, 6\}$
+- **General Use**: Provides a central value for symmetric distributions without extreme outliers.
+- **Economics**: Average income, average spending.
+- **Education**: Average test scores, average grades.
 
-- Sum of values:$3 + 3 + 4 + 5 + 5 + 6 = 26$
-- Number of values: 6
-- Mean:$\frac{26}{6} = 4.33$
+#### **Impact with Increasing/Decreasing Values**
 
-### Median
+- **Increasing Values**: As values increase, the mean will increase. For example, if you add higher values to the dataset, the mean rises.
+- **Decreasing Values**: As values decrease, the mean will decrease. Adding lower values pulls the mean down.
 
-**Definition**: The median is the middle value in a dataset when arranged in ascending order. If the number of values is even, it is the average of the two middle numbers.
+#### **Example**
 
-**Example**:
-Given the dataset:$$$1, 1, 2, 2, 3, 3, 4, 5, 5, 6\}$
+For dataset {5, 10, 15}, the mean is 10. Adding a large value like 50 changes the mean to
+$$ \frac{5 + 10 + 15 + 50}{4} = 20 $$
 
-- Median:$3$
+### 2. **Median**
 
-If an outlier (e.g., 100) is added:$$$1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 100\}$
+#### **Definition**
 
-- Median:$\frac{3 + 4}{2} = 3.5$
+The median is the middle value when data is ordered. If the dataset has an even number of observations, it's the average of the two middle values.
 
-### Mode
+#### **Application**
 
-**Definition**: The mode is the value that appears most frequently in a dataset.
+- **Income**: Median income provides a better representation of typical income, especially in skewed distributions.
+- **Housing**: Median house prices are less affected by extreme values compared to the mean.
+- **Education**: Median scores reflect the typical performance better in skewed distributions.
 
-**Example**:
-Given the dataset:$$$1, 2, 2, 3, 4, 5, 6, 6, 6, 7, 8\}$
+#### **Impact with Increasing/Decreasing Values**
 
-- Mode:$6$
+- **Increasing Values**: The median remains stable unless the values added change the middle position. For instance, adding values to the dataset might not affect the median if the added values do not change the order.
+- **Decreasing Values**: Similarly, decreasing values might not impact the median if they do not shift the middle value or the middle position of the ordered data.
 
-**Usage**:
-Mode is often used for categorical data. For instance, in a dataset of flower types, the mode would be the flower type that appears most frequently.
+#### **Example**
 
-## 2. Measure of Dispersions
+For dataset {1, 3, 5}, the median is 3. Adding values 2 and 4, the median becomes
+$$ \frac{3+4}{2} = 3.5 $$
+(since now the dataset is {1, 2, 3, 4, 5}).
 
-### Range, Variance, and Standard Deviation
+### 3. **Mode**
 
-These concepts measure the spread or variability of the dataset.
+#### **Definition**
+
+The mode is the value that appears most frequently in a dataset. There can be one mode (unimodal), more than one mode (bimodal or multimodal), or no mode if no value repeats.
+
+#### **Application**
+
+- **Retail**: Identifying the most popular product.
+- **Marketing**: Understanding the most common customer preference.
+- **Health**: Most common diagnosis or symptom in a population.
+
+#### **Impact with Increasing/Decreasing Values**
+
+- **Increasing Values**: If new values that are different from the existing values are added, the mode might remain unchanged or become a new value if it appears frequently.
+- **Decreasing Values**: Removing values can affect the mode, especially if the removed values were the most frequent ones.
+
+#### **Example**
+
+For dataset {1, 2, 2, 3, 4}, the mode is 2. Adding more values like {2, 2, 5} makes 2 appear more frequently, reinforcing it as the mode.
+
+### 4. **Geometric Mean**
+
+#### **Definition**
+
+The geometric mean is the nth root of the product of n values. It's used for rates of growth or percentages.
+
+#### **Application**
+
+- **Finance**: Average growth rates of investments.
+- **Biology**: Average rates of biological processes.
+- **Economics**: Average rates of inflation.
+
+#### **Impact with Increasing/Decreasing Values**
+
+- **Increasing Values**: Increasing values will affect the geometric mean, but it is less sensitive to extreme values compared to the arithmetic mean. The geometric mean will increase but not as rapidly as the arithmetic mean.
+- **Decreasing Values**: If very small values are introduced, especially values close to zero, the geometric mean can be significantly reduced.
+
+#### **Example**
+
+For dataset {2, 8}, the geometric mean is 
+$$ \sqrt{2 \times 8} = \sqrt{16} = 4 $$
+ Adding larger values will generally increase the geometric mean.
+
+### 5. **Harmonic Mean**
+
+#### **Definition**
+
+The harmonic mean is the reciprocal of the arithmetic mean of the reciprocals of the values. It's used for rates or ratios.
+
+#### **Application**
+
+- **Finance**: Average rates of return on investments.
+- **Physics**: Average speed or velocity calculations.
+
+#### **Impact with Increasing/Decreasing Values**
+
+- **Increasing Values**: As the values increase, the harmonic mean increases, but it is influenced more by smaller values, so it increases more slowly compared to the arithmetic mean.
+- **Decreasing Values**: Very small values will decrease the harmonic mean significantly. Adding values close to zero can drastically lower the harmonic mean.
+
+#### **Example**
+
+For dataset {1, 2, 4}, the harmonic mean is 
+$$ \frac{3}{\frac{1}{1} + \frac{1}{2} + \frac{1}{4}} = \frac{3}{1.75} \approx 1.71 $$
+ Adding very small values will reduce this mean significantly.
+
+### Summary of Impact
+
+- **Mean**: Sensitive to extreme values; increases/decreases with values.
+- **Median**: Less sensitive to extreme values; stable unless values shift the middle.
+- **Mode**: Dependent on frequency; changes if the most frequent values change.
+- **Geometric Mean**: Sensitive to extreme values but less so than the arithmetic mean; useful for growth rates.
+- **Harmonic Mean**: Sensitive to small values; useful for rates and ratios.
+-
 
 ### Example
 
-Given the dataset:$$$1, 2, 2, 3, 4, 5, 6\}$
+Given the dataset: $\{ 1, 2, 2, 3, 4, 5, 6\}$
 
 - Range:$6 - 1 = 5$
 - Variance and standard deviation calculations can be performed using appropriate formulas or software tools.
+
+## Measure of Dispersion
+
+Measures of dispersion quantify the spread or variability of a dataset. Understanding these measures helps in analyzing the consistency and variability within the data. Here are the main measures of dispersion, their applications, and how changes in the data impact them:
+
+### 1. **Range**
+   - **Definition**: The difference between the maximum and minimum values in a dataset.
+   - **Formula**: Range = Max value - Min value
+   - **Application**:
+     - **Weather Data**: Range of temperatures in a city over a month.
+     - **Finance**: Range of stock prices over a period.
+   - **Impact of Changes**:
+     - **Increasing Data**: Adding higher values increases the range.
+     - **Decreasing Data**: Adding lower values decreases the range.
+
+### 2. **Variance**
+   - **Definition**: The average of the squared differences between each data point and the mean.
+   - **Formula**:
+     - Population variance: $$ \sigma^2 = \frac{\sum (x_i - \mu)^2}{N} $$
+     - Sample variance: $$ s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} $$
+   - **Application**:
+     - **Finance**: Measure of investment risk (volatility).
+     - **Quality Control**: Variance in product measurements.
+   - **Impact of Changes**:
+     - **Increasing Data**: Variance increases if the new data points are far from the mean.
+     - **Decreasing Data**: Variance decreases if new data points are closer to the mean or less dispersed.
+
+### 3. **Standard Deviation**
+   - **Definition**: The square root of the variance, providing a measure of spread in the same units as the data.
+   - **Formula**:
+     - Population standard deviation: $$ \sigma = \sqrt{\frac{\sum (x_i - \mu)^2}{N}} $$
+     - Sample standard deviation: $$ s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}} $$
+   - **Application**:
+     - **Education**: Standard deviation of test scores to understand performance variation.
+     - **Finance**: Volatility of asset returns.
+   - **Impact of Changes**:
+     - **Increasing Data**: Standard deviation increases if new data points are more spread out from the mean.
+     - **Decreasing Data**: Standard deviation decreases if data points are more closely clustered around the mean.
+
+### 4. **Interquartile Range (IQR)**
+   - **Definition**: The difference between the third quartile (Q3) and the first quartile (Q1), representing the range within which the middle 50% of the data lies.
+   - **Formula**: IQR = Q3 - Q1
+   - **Application**:
+     - **Outlier Detection**: Identifying outliers using IQR-based methods.
+     - **Data Distribution**: Understanding the spread of the central portion of the data.
+   - **Impact of Changes**:
+     - **Increasing Data**: IQR increases if the new data points affect Q1 or Q3 significantly.
+     - **Decreasing Data**: IQR decreases if the central 50% of the data becomes narrower.
+
+### 5. **Mean Absolute Deviation (MAD)**
+   - **Definition**: The average of the absolute differences between each data point and the mean.
+   - **Formula**: $$ MAD = \frac{\sum |x_i - \bar{x}|}{n} $$
+   - **Application**:
+     - **Finance**: Assessing the average deviation in financial data.
+     - **Operations**: Evaluating consistency in production processes.
+   - **Impact of Changes**:
+     - **Increasing Data**: MAD increases if new data points are further from the mean.
+     - **Decreasing Data**: MAD decreases if data points are closer to the mean.
+
+### 6. **Coefficient of Variation (CV)**
+   - **Definition**: A standardized measure of dispersion relative to the mean, expressed as a percentage.
+   - **Formula**: $$ CV = \frac{\sigma}{\bar{x}} \times 100 $$
+   - **Application**:
+     - **Comparing Variability**: Comparing variability between datasets with different units or means.
+     - **Risk Assessment**: Assessing relative risk in finance.
+   - **Impact of Changes**:
+     - **Increasing Data**: CV increases if the standard deviation increases relative to the mean.
+     - **Decreasing Data**: CV decreases if the mean increases relative to the standard deviation.
+
+### Summary of Impacts:
+- **Range**: Directly affected by extreme values at the ends of the dataset.
+- **Variance and Standard Deviation**: Affected by the overall spread of the data points around the mean; more spread increases these values.
+- **Interquartile Range (IQR)**: Less sensitive to extreme values and focuses on the middle spread of data.
+- **Mean Absolute Deviation (MAD)**: Provides a simple average of absolute deviations and is less influenced by extreme values compared to variance and standard deviation.
+- **Coefficient of Variation (CV)**: Useful for comparing relative variability, especially when means differ significantly.
+
+Each measure of dispersion provides a different perspective on the variability in a dataset, and their changes can reflect different aspects of data distribution and spread.
 
 ## 3. Gaussian Distribution (Normal Distribution)
 
@@ -819,6 +962,7 @@ The mean of this dataset is 4, and the standard deviation is 1. You need to find
    The area to the right of the Z-score gives us the percentage of scores that fall above 4.25.
 
 ### Implementation in Python
+
 ![alt text](image-1.png)
 Let's implement this in Python to make it more concrete:
 
@@ -861,7 +1005,6 @@ print(f"Percentage of scores above {x_value}: {percentage:.2f}%")
 The percentage of scores above 4.25 in the given dataset is approximately 40%. This means that 40% of the scores in the dataset are greater than 4.25.
 
 This method is widely used in statistics, especially in hypothesis testing and confidence interval estimation, making it an essential concept for both academic purposes and practical applications in data analysis.
-
 
 # Probability
 
@@ -984,21 +1127,22 @@ Combination is used when the order of items does not matter.
 
 If we want to select 3 chocolates out of 6:
 
-$$ C(n, r) = \frac{n!}{r!(n-r)!} = \frac{6!}{3!(6-3)!} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20 
+$$ C(n, r) = \frac{n!}{r!(n-r)!} = \frac{6!}{3!(6-3)!} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20
 $$
-
 
 Sure, let's break down and clarify the concepts of permutations, combinations, and then delve into p-values and hypothesis testing.
 
 ### Permutations and Combinations
 
-#### Permutations:
+#### Permutations
+
 Permutations refer to the arrangement of objects in a specific order. The order of elements is significant. For example, if you have three elements A, B, and C, the permutations would include ABC, ACB, BAC, BCA, CAB, and CBA.
 
 The formula to calculate permutations of $n$items taken $r$at a time is:
 $$P(n, r) = \frac{n!}{(n-r)!}$$
 
-#### Combinations:
+#### Combinations
+
 Combinations refer to the selection of objects where the order does not matter. For example, if you have three elements A, B, and C, the combinations would include AB, AC, and BC.
 
 The formula to calculate combinations of $n$items taken $r$at a time is:
@@ -1009,16 +1153,19 @@ If you have items: Dairy Milk, Gems, Gems, and Eclairs. Each combination must be
 
 ### P-Value and Hypothesis Testing
 
-#### P-Value:
+#### P-Value
+
 The p-value is a measure of the probability that an observed difference could have occurred just by random chance. For example, if the p-value is 0.05, there's a 5% chance that the observed difference is due to randomness.
 
-#### Hypothesis Testing:
+#### Hypothesis Testing
+
 Hypothesis testing is a method used to decide whether there is enough evidence to reject a null hypothesis, based on sample data.
 
 1. **Null Hypothesis ($H_0$):** The default assumption (e.g., "the coin is fair").
 2. **Alternative Hypothesis ($H_a$):** The opposite of the null hypothesis (e.g., "the coin is not fair").
 
 **Steps:**
+
 1. **Define the null and alternative hypotheses.**
 2. **Perform the experiment and collect data.**
 3. **Calculate the p-value or test statistic.**
@@ -1027,6 +1174,7 @@ Hypothesis testing is a method used to decide whether there is enough evidence t
    - If $p > \alpha$, do not reject the null hypothesis.
 
 **Example: Testing a Fair Coin**
+
 - Null Hypothesis $H_0$: The coin is fair ($\text{heads}) = 0.5$).
 - Alternative Hypothesis $H_a$: The coin is not fair ($\text{heads}$) $\neq 0.5$\)).
 
@@ -1040,26 +1188,67 @@ Hypothesis testing is a method used to decide whether there is enough evidence t
    - If the observed number falls outside, reject $H_0$.
 
 **Significance Level ($\alpha$) and Confidence Interval:**
+
 - $\alpha = 0.05$: 95% confidence interval.
 - $\alpha = 0.20$: 80% confidence interval.
 
-#### Practical Example:
+#### Practical Example
 
 **Assume:**
+
 - Mean (expected number of heads in 100 tosses): 50
 - Standard deviation: 10
 
 If the observed number of heads is 30:
+
 - **Check against the 95% confidence interval (mean ± 1.96 * std dev).**
 - **30 is outside the 95% confidence interval (20, 80).**
 - Therefore, reject $H_0$.
 
 If the observed number of heads is 70:
+
 - **70 is inside the 95% confidence interval (20, 80).**
 - Therefore, do not reject $H_0$.
 
 **Adjusting Significance Level:**
+
 - With $\alpha = 0.20$, the 80% confidence interval is narrower.
 - Observations falling outside this interval (e.g., 10 or 90 heads) would lead to rejecting $H_0$.
 
 This approach helps determine whether observed data supports the null hypothesis or suggests an alternative.
+
+**Probability Density Function (PDF)**—an important concept in statistics. We'll explore how it is created, its uses, and how it helps us in data analysis.
+
+## Understanding Histograms
+
+ In a histogram, the y-axis indicates how many points are present within each range. For example, if the range is between 70 to 80 weight, there may be five values present. Similarly, between 80 to 90, there could be ten values, and so on.
+
+## From Histogram to Probability Density Function
+
+Now, let's consider how we can convert this histogram into a Probability Density Function (PDF). Essentially, we smooth the histogram to create a curve, often resembling a bell curve—especially when dealing with a Gaussian distribution.
+
+In a PDF, the y-axis no longer represents the count of values. Instead, it represents the **percentage of the distribution** within a specific range. For example, if the y-axis value is 0.1 at a particular point, it indicates that 10% of the distribution is present in that region.
+
+### Key Points about PDF
+
+- The y-axis represents the percentage of the distribution.
+- The y-axis values range between 0 and 1 (0% to 100%).
+- A PDF curve can tell us what portion of the distribution is within a specific range.
+
+## Cumulative Density Function (CDF)
+
+Now, let's explore the **Cumulative Density Function (CDF)**. In a CDF, the y-axis value represents the cumulative percentage of the distribution up to a certain point. For instance, if you add the y-values at different points, you generate a CDF curve.
+
+### Key Points about CDF
+
+- The y-axis represents the cumulative percentage of the distribution.
+- The CDF curve starts at 0 and gradually increases to 1 as you move along the x-axis.
+- The slope of the CDF curve becomes flatter as it approaches 1.
+
+### Example Interpretation
+
+Suppose at a point where weight is 130 kgs, the CDF value is 0.9. This indicates that 90% of the distribution in this dataset is less than 130 kgs, meaning the remaining 10% is greater than 130 kgs.
+
+## Conclusion
+
+In this video, we covered the concepts of **Probability Density Function (PDF)** and **Cumulative Density Function (CDF)**, and how they are used in exploratory data analysis.
