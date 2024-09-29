@@ -18,3 +18,6 @@ b = ["o","e"]
 cl = Solution()
 
 print(cl.wordSubsets(v,b))
+
+
+from scipy.stats import chi2_contingency
