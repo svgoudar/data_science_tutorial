@@ -270,9 +270,9 @@ In this video, we’ll continue our discussion on **linear algebra** by explorin
 Let’s consider two vectors:
 
 - **Vector P1**:
-  $$\begin{pmatrix} -4, 3\end{pmatrix} $$
+  $$\begin{pmatrix} -4, 3\end{pmatrix}$
 - **Vector P2**:
-  $$\begin{pmatrix} 5, 3\end{pmatrix} $$
+  $$\begin{pmatrix} 5, 3\end{pmatrix}$
 
 To add these vectors, we add their respective coordinates:
 
@@ -378,9 +378,9 @@ The **dot product** of two vectors results in a **scalar** and is calculated as 
   - Vector A: (2, 3)
   - Vector B: (4, 5)
   - Dot Product:  
-    $$
+   $
     A \cdot B = (2 \times 4) + (3 \times 5) = 8 + 15 = 23
-    $$
+   $
 
 - The dot product is widely used in machine learning for vector operations.
 
@@ -415,9 +415,9 @@ The dot product can also be understood geometrically by projecting one vector on
 **Cosine Similarity** is a key application of the dot product in data science. It measures how similar two vectors are, based on the **cosine of the angle** between them.  
 
 - **Cosine similarity** formula:
-  $$
+ $
   \text{cos}(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
-  $$
+ $
 - **Cosine similarity** ranges:
   - **-1**: completely dissimilar (opposite vectors)
   - **1**: completely similar (same direction)
@@ -430,22 +430,22 @@ The dot product can also be understood geometrically by projecting one vector on
   
 - To calculate the cosine similarity:
   1. **Dot product** of A and B:
-     $$
+    $
      A \cdot B = (1 \times 2) + (2 \times 0) + (0 \times 1) + (3 \times 1) + (1 \times 1) = 6
-     $$
+    $
   2. Calculate the **magnitude** of A and B:
      - Magnitude of A:  
-       $$
+      $
        \|A\| = \sqrt{(1^2 + 2^2 + 0^2 + 3^2 + 1^2)} = \sqrt{15} \approx 3.872
-       $$
+      $
      - Magnitude of B:  
-       $$
+      $
        \|B\| = \sqrt{(2^2 + 0^2 + 1^2 + 1^2 + 1^2)} = \sqrt{7} \approx 2.646
-       $$
+      $
   3. **Cosine similarity**:
-     $$
+    $
      \text{cos}(\theta) = \frac{6}{(3.872 \times 2.646)} \approx 0.586
-     $$
+    $
   
 - This score of **0.586** (58.6%) indicates that **Movie B** is fairly similar to **Avengers**, making it a good recommendation.
 
@@ -1126,8 +1126,8 @@ A **linear transformation** is a function between two vector spaces that preserv
 
 In order for a transformation to be **linear**, it must satisfy two important properties:
 
-1. **Additivity**: $$T(u + v) = T(u) + T(v) $$
-2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u) $$
+1. **Additivity**: $$T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
 
 Where:
 
@@ -1140,7 +1140,7 @@ Where:
 Let’s go through an example of **reflection** across the y-axis, a transformation that flips a vector across the y-axis.
 
 Given a vector
-$$x = (x_1, y_1) $$
+$$x = (x_1, y_1)$
  the **reflection transformation** can be defined as:
 
 $$
@@ -1159,7 +1159,7 @@ $$
 
 To perform the transformation, we apply the matrix to the vector
 
-$$( x = (x_1, y_1) ) $$
+$$( x = (x_1, y_1) )$
 
 $$
 T(x) = A \cdot \begin{bmatrix} x_1 \\ y_1 \end{bmatrix} = \begin{bmatrix} -x_1 \\ y_1 \end{bmatrix}
@@ -1178,14 +1178,14 @@ T(u + v) = T(u) + T(v)
 $$
 
 Let
-$$u = (u_1, u_2) $$
+$$u = (u_1, u_2)$
 
 and
 
-$$v = (v_1, v_2) $$
+$$v = (v_1, v_2)$
 
  both in
- $$R^2 $$
+ $$R^2$
 We compute the left-hand side (LHS) and right-hand side (RHS) to verify this property.
 
 #### Left-Hand Side
@@ -1390,13 +1390,13 @@ A **linear transformation** is a function between two vector spaces that preserv
 If **T** is a linear transformation from vector space **V** to vector space **W**, then it must satisfy these properties:
 
 1. **Additivity**:
-   $$
+  $
    T(u + v) = T(u) + T(v)
-   $$
+  $
 2. **Homogeneity**:
-   $$
+  $
    T(c \cdot u) = c \cdot T(u)
-   $$
+  $
 
 Where $$u, v \in V $$and $$c $$is a scalar.
 
@@ -1430,20 +1430,20 @@ $$
 
 - Let **$$u = (u_1, u_2) $$** and **$$v = (v_1, v_2) $$** be vectors in **$$\mathbb{R}^2 $$**.
 - Compute **$$u + v $$**:
-  $$
+ $
   u + v = (u_1 + v_1, u_2 + v_2)
-  $$
+ $
 - Apply the transformation **T**:
-  $$
+ $
   T(u + v) = (- (u_1 + v_1), u_2 + v_2)
-  $$
+ $
 - Now, compute **$$T(u) + T(v) $$**:
-  $$
+ $
   T(u) = (-u_1, u_2), \quad T(v) = (-v_1, v_2)
-  $$
-  $$
+ $
+ $
   T(u) + T(v) = (-u_1 - v_1, u_2 + v_2)
-  $$
+ $
 
 Since both results are the same, **additivity** is satisfied.
 
@@ -1456,17 +1456,17 @@ $$
 
 - Let **$$u = (u_1, u_2) $$** and **$$c $$** be a scalar.
 - Compute **$$c \cdot u $$**:
-  $$
+ $
   c \cdot u = (c \cdot u_1, c \cdot u_2)
-  $$
+ $
 - Apply the transformation **T**:
-  $$
+ $
   T(c \cdot u) = (-c \cdot u_1, c \cdot u_2)
-  $$
+ $
 - Now, compute **$$c \cdot T(u) $$**:
-  $$
+ $
   c \cdot T(u) = c \cdot (-u_1, u_2) = (-c \cdot u_1, c \cdot u_2)
-  $$
+ $
 
 Since both sides are equal, **homogeneity** is satisfied.
 
@@ -1496,8 +1496,8 @@ In this video, we will continue our discussion on **linear transformations**, an
 
 Just to recap, a linear transformation takes a vector from one space and converts it into another, while satisfying two important conditions:
 
-1. **Additivity**: $$T(u + v) = T(u) + T(v) $$
-2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u) $$
+1. **Additivity**: $$T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
 
 In this visualization, we will focus on **one-dimensional** and **two-dimensional** transformations to help you see what happens to the vectors as they get transformed.
 
@@ -1511,16 +1511,16 @@ T(x) = 2x
 $$
 This means we multiply each value by 2. Visually, let’s take an axis:
 
-- Positive axis: $$1, 2, 3, 4 $$
-- Negative axis: $$-1, -2, -3, -4 $$
+- Positive axis: $$1, 2, 3, 4$
+- Negative axis: $$-1, -2, -3, -4$
 
 When we apply this transformation:
 
 - $$T(0) = 0 $$(origin remains at zero)
-- $$T(1) = 2 $$
-- $$T(2) = 4 $$
-- $$T(-1) = -2 $$
-- $$T(-2) = -4 $$
+- $$T(1) = 2$
+- $$T(2) = 4$
+- $$T(-1) = -2$
+- $$T(-2) = -4$
 
 What you notice is that the **scale changes**, but the points remain on a straight line. This scaling transformation stretches the space but **keeps everything linear**, which is a hallmark of a linear transformation. The origin remains fixed and the line remains straight, as required.
 
@@ -1532,9 +1532,9 @@ T(x) = \frac{1}{2}x
 $$
 This transformation reduces the magnitude of each point by half:
 
-- $$T(1) = 0.5 $$
-- $$T(2) = 1 $$
-- $$T(4) = 2 $$
+- $$T(1) = 0.5$
+- $$T(2) = 1$
+- $$T(4) = 2$
 
 This again scales down the entire axis, compressing it towards zero. But notice the origin stays fixed and the line remains a line, thus preserving the linear transformation conditions.
 
@@ -1835,8 +1835,8 @@ Given a function $$f $$, it maps every element $$x $$from set $$X $$to an elemen
 
 We can also express this with the following properties:
 
-1. $$f^{-1}(f(x)) = x $$for all $$x \in X $$
-2. $$f(f^{-1}(y)) = y $$for all $$y \in Y $$
+1. $$f^{-1}(f(x)) = x $$for all $$x \in X$
+2. $$f(f^{-1}(y)) = y $$for all $$y \in Y$
 
 In simple terms, applying a function and then its inverse **returns the original value**.
 
@@ -1844,9 +1844,9 @@ In simple terms, applying a function and then its inverse **returns the original
 
 Let’s say we have a function $$f $$that maps values from set $$X $$to set $$Y $$. For example:
 
-- $$f(1) = 5 $$
-- $$f(2) = 7 $$
-- $$f(3) = 9 $$
+- $$f(1) = 5$
+- $$f(2) = 7$
+- $$f(3) = 9$
 
 If you apply $$f $$to $$x = 2 $$, you get $$f(2) = 7 $$. The inverse function $$f^{-1} $$will reverse this mapping and give you back the original value $$x = 2 $$when you apply it to $$y = 7 $$:
 $$
@@ -1875,8 +1875,8 @@ $$
 
 1. **Preservation**: The identity function does not alter any element. The image of any element under the identity function is the element itself.
 2. **Linearity**: The identity function is a **linear transformation**. It satisfies:
-   - **Additivity**: $$I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v}) $$
-   - **Homogeneity**: $$I(c \mathbf{u}) = c I(\mathbf{u}) $$
+   - **Additivity**: $$I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v})$
+   - **Homogeneity**: $$I(c \mathbf{u}) = c I(\mathbf{u})$
 
 In short, the identity function preserves elements and is its own inverse.
 
@@ -1897,15 +1897,15 @@ f(x) = 2x + 3
 $$
 To find the inverse, follow these steps:
 
-1. Replace $$f(x) $$with $$y $$: $$y = 2x + 3 $$
+1. Replace $$f(x) $$with $$y $$: $$y = 2x + 3$
 2. Solve for $$x $$:
-   $$
+  $
    x = \frac{y - 3}{2}
-   $$
+  $
 3. The inverse function is:
-   $$
+  $
    f^{-1}(y) = \frac{y - 3}{2}
-   $$
+  $
 
 So, if $$f(1) = 5 $$, applying the inverse gives:
 $$
@@ -1917,13 +1917,13 @@ $$
 We can verify the inverse by checking:
 
 1. **Applying the inverse after the function**:
-   $$
+  $
    f^{-1}(f(x)) = f^{-1}(2x + 3) = \frac{(2x + 3) - 3}{2} = x
-   $$
+  $
 2. **Applying the function after the inverse**:
-   $$
+  $
    f(f^{-1}(y)) = f\left( \frac{y - 3}{2} \right) = 2 \cdot \frac{y - 3}{2} + 3 = y
-   $$
+  $
 
 This proves that the inverse returns the original values, confirming that we have found the correct inverse.
 
@@ -1949,34 +1949,34 @@ Thank you for watching, and I’ll see you in the next video!
 
 1. **Normalization and Standardization**:
    - **Standardization**: This method transforms features so that they have a mean of 0 and a standard deviation of 1. The formula for standardization is:
-     $$
+    $
      Z = \frac{X - \mu}{\sigma}
-     $$
+    $
      Inverse transformation for standardization:
-     $$
+    $
      X = Z \times \sigma + \mu
-     $$
+    $
      This is crucial in ensuring that all features, regardless of their original units, are on the same scale, improving the optimization and performance of machine learning models.
 
    - **Normalization**: A common technique such as min-max scaling brings the values between 0 and 1:
-     $$
+    $
      Z = \frac{X - \text{min}(X)}{\text{max}(X) - \text{min}(X)}
-     $$
+    $
      Inverse transformation for normalization:
-     $$
+    $
      X = Z \times (\text{max}(X) - \text{min}(X)) + \text{min}(X)
-     $$
+    $
      This is often used in image processing and neural networks to ensure all pixel values (or other data features) fall within a consistent range.
 
 2. **Log Transformation**:
    - Often used when data is skewed (e.g., financial or sales data). A logarithmic transformation can convert a right-skewed distribution into a normal distribution, stabilizing variance and improving model performance.
-     $$
+    $
      Y = \log(X)
-     $$
+    $
      Inverse transformation:
-     $$
+    $
      X = e^Y
-     $$
+    $
 
 3. **Rescaling Predictions (Post-training)**:
    - After training a model on standardized or normalized data, the predictions might need to be rescaled back to their original units to make them interpretable. This is done using the inverse function of the transformation applied during preprocessing.
@@ -2053,29 +2053,29 @@ A determinant is a scalar value computed from a square matrix, which indicates t
 For our example matrix $A = \begin{pmatrix} 2 & 4 \\ 7 & 6 \end{pmatrix}$:
 
 1. **Calculate Determinant**:
-   $$
+  $
    \text{det}(A) = ad - bc = (2)(6) - (4)(7) = 12 - 28 = -16
-   $$
+  $
 
 2. **Inverse Calculation**:
    Since the determinant is non-zero ($$-16$$), the matrix is invertible.
    Using the inverse formula:
-   $$
+  $
    A^{-1} = \frac{1}{-16} \begin{pmatrix} 6 & -4 \\ -7 & 2 \end{pmatrix} = \begin{pmatrix} -0.375 & 0.25 \\ 0.4375 & -0.125 \end{pmatrix}
-   $$
+  $
 
 3. **Verification with Vector**:
    We can verify the inverse using a vector. Let’s consider the vector $$X = \begin{pmatrix} 1 \\ 1 \end{pmatrix} $$.
 
    - Apply the transformation:
-   $$
+  $
    Y = A \cdot X = \begin{pmatrix} 2 & 4 \\ 7 & 6 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 6 \\ 13 \end{pmatrix}
-   $$
+  $
 
    - Recover $$X $$using the inverse:
-   $$
+  $
    X = A^{-1} \cdot Y = \begin{pmatrix} -0.375 & 0.25 \\ 0.4375 & -0.125 \end{pmatrix} \begin{pmatrix} 6 \\ 13 \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
-   $$
+  $
 
 This shows that the inverse successfully recovers the original vector $X$.
 
