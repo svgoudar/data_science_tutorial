@@ -111,7 +111,7 @@ This is done using transformations in linear algebra.
 
 ### 5. **Optimization**
 
-Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $$m$$ and intercept $$c$$ in regression.
+Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $$m$$and intercept $$c$$in regression.
 
 - **Gradient Descent**: A method used to minimize errors by adjusting parameters.
 - This process is vital in training machine learning models.
@@ -147,7 +147,7 @@ A **scalar** is a single numerical value representing magnitude (or quantity) wi
 
 - **Count of Records**: In a dataset, counting the total number of records (e.g., 5 records) is a scalar value.
 - **Average of Features**: Calculating the average of a feature like **age** also yields a scalar value.
-- **Simple Linear Regression**: In the equation $$ y = mx + c $$, the **intercept** $$ c $$ is a scalar value.
+- **Simple Linear Regression**: In the equation $$y = mx + c $$, the **intercept** $$c $$is a scalar value.
 
 ### 2. **Vectors**
 
@@ -162,30 +162,30 @@ A **vector** is an ordered list of numbers that represents both magnitude and di
 #### Vectors in Data Science
 
 - **Student Marks Example**: Consider a dataset with features like **IQ** and **study hours**, and output as **pass/fail**.  
-  - The vector for a record might be $$ (90, 3) $$, representing 90 IQ and 3 study hours.
+  - The vector for a record might be $$(90, 3) $$, representing 90 IQ and 3 study hours.
   
-- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $$ (70, 72, 75, 73) $$.
+- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $$(70, 72, 75, 73) $$.
 
 #### Plotting Vectors in 2D
 
-- In a **2D coordinate system**, a vector like $$ (1, 2) $$ can be plotted, where 1 is the x-coordinate, and 2 is the y-coordinate. The distance from the origin can be calculated using the **Pythagorean theorem**.
+- In a **2D coordinate system**, a vector like $$(1, 2) $$can be plotted, where 1 is the x-coordinate, and 2 is the y-coordinate. The distance from the origin can be calculated using the **Pythagorean theorem**.
 
 #### Vectors in Machine Learning
 
-- In **machine learning**, each data record can be represented as a vector of features. For example, a student’s **IQ** and **study hours** can form a vector $$ (90, 2) $$. Each vector in a dataset represents an individual data point.
+- In **machine learning**, each data record can be represented as a vector of features. For example, a student’s **IQ** and **study hours** can form a vector $$(90, 2) $$. Each vector in a dataset represents an individual data point.
 
 ### 3. **Vectors in Higher Dimensions**
 
-- **3D Vectors**: Vectors can also represent points in 3D (e.g., $$ x, y, z $$ coordinates). In **machine learning**, a model can take multiple features (e.g., IQ, study hours, and pass/fail) and represent them in higher dimensions.
+- **3D Vectors**: Vectors can also represent points in 3D (e.g., $$x, y, z $$coordinates). In **machine learning**, a model can take multiple features (e.g., IQ, study hours, and pass/fail) and represent them in higher dimensions.
 - **Higher Dimensions**: In data science, we often work with data that has many dimensions (e.g., 100 features), which can be represented as vectors in higher-dimensional space. **Linear algebra** allows us to work with vectors in any number of dimensions.
 
 ### 4. **Unit Vectors**
 
 A **unit vector** has a magnitude of 1 and indicates direction.  
 
-- **Representation**: $$ \hat{v} $$ represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
+- **Representation**: $$\hat{v} $$represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
   
-- **Example**: A vector $$ (3, 3) $$ can be expressed as $$ 3i + 3j $$, where **i** and **j** are unit vectors in the x and y directions.
+- **Example**: A vector $$(3, 3) $$can be expressed as $$3i + 3j $$, where **i** and **j** are unit vectors in the x and y directions.
 
 ### 5. **Vectors in Machine Learning Models**
 
@@ -270,9 +270,9 @@ In this video, we’ll continue our discussion on **linear algebra** by explorin
 Let’s consider two vectors:
 
 - **Vector P1**:
-  $$ \begin{pmatrix} -4, 3\end{pmatrix} $$
+  $$\begin{pmatrix} -4, 3\end{pmatrix}$
 - **Vector P2**:
-  $$ \begin{pmatrix} 5, 3\end{pmatrix} $$
+  $$\begin{pmatrix} 5, 3\end{pmatrix}$
 
 To add these vectors, we add their respective coordinates:
 
@@ -311,7 +311,7 @@ $$
 
 The result of adding A and B:
 
-  $$ \begin{pmatrix}x_1 + x_2, y_1 + y_2, z_1 + z_2\end{pmatrix}$$
+  $$\begin{pmatrix}x_1 + x_2, y_1 + y_2, z_1 + z_2\end{pmatrix}$$
 
 This concept can be extended to any number of dimensions.
 
@@ -378,9 +378,9 @@ The **dot product** of two vectors results in a **scalar** and is calculated as 
   - Vector A: (2, 3)
   - Vector B: (4, 5)
   - Dot Product:  
-    $$
+   $
     A \cdot B = (2 \times 4) + (3 \times 5) = 8 + 15 = 23
-    $$
+   $
 
 - The dot product is widely used in machine learning for vector operations.
 
@@ -415,9 +415,9 @@ The dot product can also be understood geometrically by projecting one vector on
 **Cosine Similarity** is a key application of the dot product in data science. It measures how similar two vectors are, based on the **cosine of the angle** between them.  
 
 - **Cosine similarity** formula:
-  $$
+ $
   \text{cos}(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
-  $$
+ $
 - **Cosine similarity** ranges:
   - **-1**: completely dissimilar (opposite vectors)
   - **1**: completely similar (same direction)
@@ -430,22 +430,22 @@ The dot product can also be understood geometrically by projecting one vector on
   
 - To calculate the cosine similarity:
   1. **Dot product** of A and B:
-     $$
+    $
      A \cdot B = (1 \times 2) + (2 \times 0) + (0 \times 1) + (3 \times 1) + (1 \times 1) = 6
-     $$
+    $
   2. Calculate the **magnitude** of A and B:
      - Magnitude of A:  
-       $$
+      $
        \|A\| = \sqrt{(1^2 + 2^2 + 0^2 + 3^2 + 1^2)} = \sqrt{15} \approx 3.872
-       $$
+      $
      - Magnitude of B:  
-       $$
+      $
        \|B\| = \sqrt{(2^2 + 0^2 + 1^2 + 1^2 + 1^2)} = \sqrt{7} \approx 2.646
-       $$
+      $
   3. **Cosine similarity**:
-     $$
+    $
      \text{cos}(\theta) = \frac{6}{(3.872 \times 2.646)} \approx 0.586
-     $$
+    $
   
 - This score of **0.586** (58.6%) indicates that **Movie B** is fairly similar to **Avengers**, making it a good recommendation.
 
@@ -783,7 +783,7 @@ In **NLP**, text is converted into vectors using techniques like **word embeddin
 
 Text data like "The food is bad" can be represented as vectors:
 
-$$ \text{Review 1:} \quad (0.1, 0.2, 0.3) \\
+$$\text{Review 1:} \quad (0.1, 0.2, 0.3) \\
 \text{Review 2:} \quad (0.4, 0.5, 0.6)
 $$
 These vectors can be combined into a matrix, which can then be used in machine learning models.
@@ -1126,21 +1126,21 @@ A **linear transformation** is a function between two vector spaces that preserv
 
 In order for a transformation to be **linear**, it must satisfy two important properties:
 
-1. **Additivity**: $$ T(u + v) = T(u) + T(v) $$
-2. **Homogeneity**: $$ T(c \cdot u) = c \cdot T(u) $$
+1. **Additivity**: $$T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
 
 Where:
 
-- $$ T $$ is the transformation.
-- $$ u $$ and $$ v $$ are vectors.
-- $$ c $$ is a scalar.
+- $$T $$is the transformation.
+- $$u $$and $$v $$are vectors.
+- $$c $$is a scalar.
 
 ### Example: Reflection Transformation
 
 Let’s go through an example of **reflection** across the y-axis, a transformation that flips a vector across the y-axis.
 
 Given a vector
-$$ x = (x_1, y_1) $$
+$$x = (x_1, y_1)$
  the **reflection transformation** can be defined as:
 
 $$
@@ -1159,7 +1159,7 @@ $$
 
 To perform the transformation, we apply the matrix to the vector
 
-$$ ( x = (x_1, y_1) ) $$
+$$( x = (x_1, y_1) )$
 
 $$
 T(x) = A \cdot \begin{bmatrix} x_1 \\ y_1 \end{bmatrix} = \begin{bmatrix} -x_1 \\ y_1 \end{bmatrix}
@@ -1178,14 +1178,14 @@ T(u + v) = T(u) + T(v)
 $$
 
 Let
-$$ u = (u_1, u_2) $$
+$$u = (u_1, u_2)$
 
 and
 
-$$ v = (v_1, v_2) $$
+$$v = (v_1, v_2)$
 
  both in
- $$ R^2 $$
+ $$R^2$
 We compute the left-hand side (LHS) and right-hand side (RHS) to verify this property.
 
 #### Left-Hand Side
@@ -1390,22 +1390,22 @@ A **linear transformation** is a function between two vector spaces that preserv
 If **T** is a linear transformation from vector space **V** to vector space **W**, then it must satisfy these properties:
 
 1. **Additivity**:
-   $$
+  $
    T(u + v) = T(u) + T(v)
-   $$
+  $
 2. **Homogeneity**:
-   $$
+  $
    T(c \cdot u) = c \cdot T(u)
-   $$
+  $
 
-Where $$ u, v \in V $$ and $$ c $$ is a scalar.
+Where $$u, v \in V $$and $$c $$is a scalar.
 
 ### Example: Reflection Transformation
 
 Let's consider a common **real-world example** of reflection across the **y-axis**.
 
-- **Vector**: Let’s say we have a vector $$ x = (x, y) $$ in 2D space, represented as part of **$$ \mathbb{R}^2 $$** (two-dimensional real space).
-- **Transformation**: We want to reflect this vector across the **y-axis**. The transformation **T** maps $$ (x, y) $$ to $$ (-x, y) $$.
+- **Vector**: Let’s say we have a vector $$x = (x, y) $$in 2D space, represented as part of **$$\mathbb{R}^2 $$** (two-dimensional real space).
+- **Transformation**: We want to reflect this vector across the **y-axis**. The transformation **T** maps $$(x, y) $$to $$(-x, y) $$.
 
 The transformation **T** can be expressed as a **matrix multiplication**:
 $$
@@ -1428,22 +1428,22 @@ $$
 T(u + v) = T(u) + T(v)
 $$
 
-- Let **$$ u = (u_1, u_2) $$** and **$$ v = (v_1, v_2) $$** be vectors in **$$ \mathbb{R}^2 $$**.
-- Compute **$$ u + v $$**:
-  $$
+- Let **$$u = (u_1, u_2) $$** and **$$v = (v_1, v_2) $$** be vectors in **$$\mathbb{R}^2 $$**.
+- Compute **$$u + v $$**:
+ $
   u + v = (u_1 + v_1, u_2 + v_2)
-  $$
+ $
 - Apply the transformation **T**:
-  $$
+ $
   T(u + v) = (- (u_1 + v_1), u_2 + v_2)
-  $$
-- Now, compute **$$ T(u) + T(v) $$**:
-  $$
+ $
+- Now, compute **$$T(u) + T(v) $$**:
+ $
   T(u) = (-u_1, u_2), \quad T(v) = (-v_1, v_2)
-  $$
-  $$
+ $
+ $
   T(u) + T(v) = (-u_1 - v_1, u_2 + v_2)
-  $$
+ $
 
 Since both results are the same, **additivity** is satisfied.
 
@@ -1454,19 +1454,19 @@ $$
 T(c \cdot u) = c \cdot T(u)
 $$
 
-- Let **$$ u = (u_1, u_2) $$** and **$$ c $$** be a scalar.
-- Compute **$$ c \cdot u $$**:
-  $$
+- Let **$$u = (u_1, u_2) $$** and **$$c $$** be a scalar.
+- Compute **$$c \cdot u $$**:
+ $
   c \cdot u = (c \cdot u_1, c \cdot u_2)
-  $$
+ $
 - Apply the transformation **T**:
-  $$
+ $
   T(c \cdot u) = (-c \cdot u_1, c \cdot u_2)
-  $$
-- Now, compute **$$ c \cdot T(u) $$**:
-  $$
+ $
+- Now, compute **$$c \cdot T(u) $$**:
+ $
   c \cdot T(u) = c \cdot (-u_1, u_2) = (-c \cdot u_1, c \cdot u_2)
-  $$
+ $
 
 Since both sides are equal, **homogeneity** is satisfied.
 
@@ -1496,8 +1496,8 @@ In this video, we will continue our discussion on **linear transformations**, an
 
 Just to recap, a linear transformation takes a vector from one space and converts it into another, while satisfying two important conditions:
 
-1. **Additivity**: $$ T(u + v) = T(u) + T(v) $$
-2. **Homogeneity**: $$ T(c \cdot u) = c \cdot T(u) $$
+1. **Additivity**: $$T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
 
 In this visualization, we will focus on **one-dimensional** and **two-dimensional** transformations to help you see what happens to the vectors as they get transformed.
 
@@ -1511,16 +1511,16 @@ T(x) = 2x
 $$
 This means we multiply each value by 2. Visually, let’s take an axis:
 
-- Positive axis: $$ 1, 2, 3, 4 $$
-- Negative axis: $$ -1, -2, -3, -4 $$
+- Positive axis: $$1, 2, 3, 4$
+- Negative axis: $$-1, -2, -3, -4$
 
 When we apply this transformation:
 
-- $$ T(0) = 0 $$ (origin remains at zero)
-- $$ T(1) = 2 $$
-- $$ T(2) = 4 $$
-- $$ T(-1) = -2 $$
-- $$ T(-2) = -4 $$
+- $$T(0) = 0 $$(origin remains at zero)
+- $$T(1) = 2$
+- $$T(2) = 4$
+- $$T(-1) = -2$
+- $$T(-2) = -4$
 
 What you notice is that the **scale changes**, but the points remain on a straight line. This scaling transformation stretches the space but **keeps everything linear**, which is a hallmark of a linear transformation. The origin remains fixed and the line remains straight, as required.
 
@@ -1532,9 +1532,9 @@ T(x) = \frac{1}{2}x
 $$
 This transformation reduces the magnitude of each point by half:
 
-- $$ T(1) = 0.5 $$
-- $$ T(2) = 1 $$
-- $$ T(4) = 2 $$
+- $$T(1) = 0.5$
+- $$T(2) = 1$
+- $$T(4) = 2$
 
 This again scales down the entire axis, compressing it towards zero. But notice the origin stays fixed and the line remains a line, thus preserving the linear transformation conditions.
 
@@ -1559,8 +1559,8 @@ T(x, y) = (2x, 2y)
 $$
 This transformation doubles the values of both **x** and **y** coordinates:
 
-- A point $$ (1, 1) $$ becomes $$ (2, 2) $$.
-- A point $$ (2, 1) $$ becomes $$ (4, 2) $$.
+- A point $$(1, 1) $$becomes $$(2, 2) $$.
+- A point $$(2, 1) $$becomes $$(4, 2) $$.
 
 Notice how the entire plane is stretched, but the **origin stays the same** and **all lines remain straight**. This scaling effect is a classic example of a linear transformation in two dimensions.
 
@@ -1590,8 +1590,8 @@ $$
 T(x, y) = (-y, x)
 $$
 
-- A point $$ (1, 0) $$ becomes $$ (0, 1) $$.
-- A point $$ (0, 1) $$ becomes $$ (-1, 0) $$.
+- A point $$(1, 0) $$becomes $$(0, 1) $$.
+- A point $$(0, 1) $$becomes $$(-1, 0) $$.
 
 The origin stays fixed, and the vectors are rotated. All the lines remain straight, which confirms this is a linear transformation.
 
@@ -1628,15 +1628,15 @@ The magnitude of a vector refers to its **length**, and it’s one of the key pr
 
 #### How Do We Calculate the Magnitude of a Vector?
 
-Let’s break it down with an example. Suppose you have a 2D vector $$ \mathbf{x} $$ given by:
+Let’s break it down with an example. Suppose you have a 2D vector $$\mathbf{x} $$given by:
 $$
 \mathbf{x} = (x_1, x_2)
 $$
 
 To calculate its magnitude, we can use the **Pythagorean Theorem**. Consider this vector in the coordinate plane:
 
-- On the x-axis, the coordinate is $$ x_1 $$.
-- On the y-axis, the coordinate is $$ x_2 $$.
+- On the x-axis, the coordinate is $$x_1 $$.
+- On the y-axis, the coordinate is $$x_2 $$.
 
 The magnitude of this vector is simply the distance from the origin to this point, which is calculated as:
 $$
@@ -1646,18 +1646,18 @@ This formula is just an extension of the Pythagorean theorem, where the vector f
 
 ##### Example
 
-If $$ \mathbf{x} = (2, 3) $$, the magnitude is:
+If $$\mathbf{x} = (2, 3) $$, the magnitude is:
 $$
 |\mathbf{x}| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}
 $$
 
 #### Magnitude in Higher Dimensions
 
-For a 3D vector $$ \mathbf{x} = (x_1, x_2, x_3) $$, the magnitude is calculated as:
+For a 3D vector $$\mathbf{x} = (x_1, x_2, x_3) $$, the magnitude is calculated as:
 $$
 |\mathbf{x}| = \sqrt{x_1^2 + x_2^2 + x_3^2}
 $$
-This can be generalized for any $$ n $$-dimensional vector $$ \mathbf{x} = (x_1, x_2, \dots, x_n) $$ as:
+This can be generalized for any $$n $$-dimensional vector $$\mathbf{x} = (x_1, x_2, \dots, x_n) $$as:
 $$
 |\mathbf{x}| = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2}
 $$
@@ -1670,7 +1670,7 @@ A **unit vector** is a vector that has a **magnitude of 1**. In other words, it 
 
 #### How Do We Convert a Vector to a Unit Vector?
 
-To convert any vector $$ \mathbf{v} $$ into a unit vector, we need to **normalize** it. This is done by dividing the vector by its magnitude. The formula for a unit vector $$ \mathbf{u} $$ is:
+To convert any vector $$\mathbf{v} $$into a unit vector, we need to **normalize** it. This is done by dividing the vector by its magnitude. The formula for a unit vector $$\mathbf{u} $$is:
 $$
 \mathbf{u} = \frac{1}{|\mathbf{v}|} \cdot \mathbf{v}
 $$
@@ -1678,9 +1678,9 @@ This ensures that the resulting vector has a magnitude of 1.
 
 #### Example
 
-Suppose we have a vector $$ \mathbf{v} = (1, 2, 0) $$. To find the unit vector:
+Suppose we have a vector $$\mathbf{v} = (1, 2, 0) $$. To find the unit vector:
 
-1. First, calculate the magnitude of $$ \mathbf{v} $$:
+1. First, calculate the magnitude of $$\mathbf{v} $$:
 
 $$
 |\mathbf{v}| = \sqrt{1^2 + 2^2 + 0^2} = \sqrt{1 + 4} = \sqrt{5}
@@ -1696,7 +1696,7 @@ We can confirm that this is a unit vector by calculating its magnitude, which sh
 $$
 |\mathbf{u}| = \sqrt{\left( \frac{1}{\sqrt{5}} \right)^2 + \left( \frac{2}{\sqrt{5}} \right)^2 + 0^2} = \sqrt{\frac{1}{5} + \frac{4}{5}} = \sqrt{1} = 1
 $$
-Thus, $$ \mathbf{u} $$ is indeed a unit vector.
+Thus, $$\mathbf{u} $$is indeed a unit vector.
 
 ---
 
@@ -1818,7 +1818,7 @@ In this video, we will continue our discussion on **transformations and function
 
 ### What is the Inverse of a Function?
 
-Let’s start with the **definition** and **intuition** behind inverse functions. Simply put, the **inverse of a function** is a function that **reverses the effect** of the original function. If you have a function $$ f $$ that maps an element $$ x $$ from a set $$ X $$ to an element $$ y $$ in a set $$ Y $$, the **inverse function** (denoted as $$ f^{-1} $$) maps **y** back to **x**.
+Let’s start with the **definition** and **intuition** behind inverse functions. Simply put, the **inverse of a function** is a function that **reverses the effect** of the original function. If you have a function $$f $$that maps an element $$x $$from a set $$X $$to an element $$y $$in a set $$Y $$, the **inverse function** (denoted as $$f^{-1} $$) maps **y** back to **x**.
 
 Mathematically, if:
 $$
@@ -1831,31 +1831,31 @@ $$
 
 ### Formal Definition
 
-Given a function $$ f $$, it maps every element $$ x $$ from set $$ X $$ to an element $$ y $$ in set $$ Y $$. The inverse function $$ f^{-1} $$ does the reverse — it takes $$ y $$ from set $$ Y $$ and maps it back to $$ x $$ in set $$ X $$.
+Given a function $$f $$, it maps every element $$x $$from set $$X $$to an element $$y $$in set $$Y $$. The inverse function $$f^{-1} $$does the reverse — it takes $$y $$from set $$Y $$and maps it back to $$x $$in set $$X $$.
 
 We can also express this with the following properties:
 
-1. $$ f^{-1}(f(x)) = x $$ for all $$ x \in X $$
-2. $$ f(f^{-1}(y)) = y $$ for all $$ y \in Y $$
+1. $$f^{-1}(f(x)) = x $$for all $$x \in X$
+2. $$f(f^{-1}(y)) = y $$for all $$y \in Y$
 
 In simple terms, applying a function and then its inverse **returns the original value**.
 
 ### Example to Understand Inverses
 
-Let’s say we have a function $$ f $$ that maps values from set $$ X $$ to set $$ Y $$. For example:
+Let’s say we have a function $$f $$that maps values from set $$X $$to set $$Y $$. For example:
 
-- $$ f(1) = 5 $$
-- $$ f(2) = 7 $$
-- $$ f(3) = 9 $$
+- $$f(1) = 5$
+- $$f(2) = 7$
+- $$f(3) = 9$
 
-If you apply $$ f $$ to $$ x = 2 $$, you get $$ f(2) = 7 $$. The inverse function $$ f^{-1} $$ will reverse this mapping and give you back the original value $$ x = 2 $$ when you apply it to $$ y = 7 $$:
+If you apply $$f $$to $$x = 2 $$, you get $$f(2) = 7 $$. The inverse function $$f^{-1} $$will reverse this mapping and give you back the original value $$x = 2 $$when you apply it to $$y = 7 $$:
 $$
 f^{-1}(7) = 2
 $$
 
 ### Identity Function
 
-Another important concept to discuss is the **identity function**. The identity function is one that **maps every element to itself**. For any element $$ x \in X $$:
+Another important concept to discuss is the **identity function**. The identity function is one that **maps every element to itself**. For any element $$x \in X $$:
 $$
 I(x) = x
 $$
@@ -1866,7 +1866,7 @@ Let’s consider an identity matrix:
 $$
 I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
 $$
-If you multiply this identity matrix with a vector $$ \mathbf{v} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} $$, you get the same vector back:
+If you multiply this identity matrix with a vector $$\mathbf{v} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} $$, you get the same vector back:
 $$
 I \cdot \mathbf{v} = \mathbf{v}
 $$
@@ -1875,8 +1875,8 @@ $$
 
 1. **Preservation**: The identity function does not alter any element. The image of any element under the identity function is the element itself.
 2. **Linearity**: The identity function is a **linear transformation**. It satisfies:
-   - **Additivity**: $$ I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v}) $$
-   - **Homogeneity**: $$ I(c \mathbf{u}) = c I(\mathbf{u}) $$
+   - **Additivity**: $$I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v})$
+   - **Homogeneity**: $$I(c \mathbf{u}) = c I(\mathbf{u})$
 
 In short, the identity function preserves elements and is its own inverse.
 
@@ -1897,17 +1897,17 @@ f(x) = 2x + 3
 $$
 To find the inverse, follow these steps:
 
-1. Replace $$ f(x) $$ with $$ y $$: $$ y = 2x + 3 $$
-2. Solve for $$ x $$:
-   $$
+1. Replace $$f(x) $$with $$y $$: $$y = 2x + 3$
+2. Solve for $$x $$:
+  $
    x = \frac{y - 3}{2}
-   $$
+  $
 3. The inverse function is:
-   $$
+  $
    f^{-1}(y) = \frac{y - 3}{2}
-   $$
+  $
 
-So, if $$ f(1) = 5 $$, applying the inverse gives:
+So, if $$f(1) = 5 $$, applying the inverse gives:
 $$
 f^{-1}(5) = \frac{5 - 3}{2} = 1
 $$
@@ -1917,13 +1917,13 @@ $$
 We can verify the inverse by checking:
 
 1. **Applying the inverse after the function**:
-   $$
+  $
    f^{-1}(f(x)) = f^{-1}(2x + 3) = \frac{(2x + 3) - 3}{2} = x
-   $$
+  $
 2. **Applying the function after the inverse**:
-   $$
+  $
    f(f^{-1}(y)) = f\left( \frac{y - 3}{2} \right) = 2 \cdot \frac{y - 3}{2} + 3 = y
-   $$
+  $
 
 This proves that the inverse returns the original values, confirming that we have found the correct inverse.
 
@@ -1949,34 +1949,34 @@ Thank you for watching, and I’ll see you in the next video!
 
 1. **Normalization and Standardization**:
    - **Standardization**: This method transforms features so that they have a mean of 0 and a standard deviation of 1. The formula for standardization is:
-     $$
+    $
      Z = \frac{X - \mu}{\sigma}
-     $$
+    $
      Inverse transformation for standardization:
-     $$
+    $
      X = Z \times \sigma + \mu
-     $$
+    $
      This is crucial in ensuring that all features, regardless of their original units, are on the same scale, improving the optimization and performance of machine learning models.
 
    - **Normalization**: A common technique such as min-max scaling brings the values between 0 and 1:
-     $$
+    $
      Z = \frac{X - \text{min}(X)}{\text{max}(X) - \text{min}(X)}
-     $$
+    $
      Inverse transformation for normalization:
-     $$
+    $
      X = Z \times (\text{max}(X) - \text{min}(X)) + \text{min}(X)
-     $$
+    $
      This is often used in image processing and neural networks to ensure all pixel values (or other data features) fall within a consistent range.
 
 2. **Log Transformation**:
    - Often used when data is skewed (e.g., financial or sales data). A logarithmic transformation can convert a right-skewed distribution into a normal distribution, stabilizing variance and improving model performance.
-     $$
+    $
      Y = \log(X)
-     $$
+    $
      Inverse transformation:
-     $$
+    $
      X = e^Y
-     $$
+    $
 
 3. **Rescaling Predictions (Post-training)**:
    - After training a model on standardized or normalized data, the predictions might need to be rescaled back to their original units to make them interpretable. This is done using the inverse function of the transformation applied during preprocessing.
@@ -2008,7 +2008,7 @@ We will discuss two important concepts:
 
 ### Example: 2x2 Matrix
 
-Let's consider a 2x2 matrix $$ A $$:
+Let's consider a 2x2 matrix $$A $$:
 $$
 A = \begin{pmatrix} 2 & 4 \\ 7 & 6 \end{pmatrix}
 $$
@@ -2017,11 +2017,11 @@ We need to find its inverse and verify it using vector transformations. Recall t
 
 ### Matrix Transformation
 
-We will use the matrix $$ A $$ to perform a transformation. This transformation takes some real values and maps them to another real value, indicated by:
+We will use the matrix $$A $$to perform a transformation. This transformation takes some real values and maps them to another real value, indicated by:
 $$
 Y = A \cdot X
 $$
-Where $$ A $$ is our matrix and $$ X $$ is our input vector. To find the inverse $$ A^{-1} $$, we should be able to recover $$ X $$ from $$ Y $$.
+Where $$A $$is our matrix and $$X $$is our input vector. To find the inverse $$A^{-1} $$, we should be able to recover $$X $$from $$Y $$.
 
 ### Inverse Formula
 
@@ -2029,11 +2029,11 @@ To calculate the inverse of a matrix, we use the following formula:
 $$
 A^{-1} = \frac{1}{\text{det}(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
 $$
-Where the elements of matrix $$ A $$ are:
+Where the elements of matrix $$A $$are:
 $$
 A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
 $$
-First, we need to calculate the determinant of $$ A $$.
+First, we need to calculate the determinant of $$A $$.
 
 ### Understanding Determinant
 
@@ -2053,29 +2053,29 @@ A determinant is a scalar value computed from a square matrix, which indicates t
 For our example matrix $A = \begin{pmatrix} 2 & 4 \\ 7 & 6 \end{pmatrix}$:
 
 1. **Calculate Determinant**:
-   $$
+  $
    \text{det}(A) = ad - bc = (2)(6) - (4)(7) = 12 - 28 = -16
-   $$
+  $
 
 2. **Inverse Calculation**:
    Since the determinant is non-zero ($$-16$$), the matrix is invertible.
    Using the inverse formula:
-   $$
+  $
    A^{-1} = \frac{1}{-16} \begin{pmatrix} 6 & -4 \\ -7 & 2 \end{pmatrix} = \begin{pmatrix} -0.375 & 0.25 \\ 0.4375 & -0.125 \end{pmatrix}
-   $$
+  $
 
 3. **Verification with Vector**:
-   We can verify the inverse using a vector. Let’s consider the vector $$ X = \begin{pmatrix} 1 \\ 1 \end{pmatrix} $$.
+   We can verify the inverse using a vector. Let’s consider the vector $$X = \begin{pmatrix} 1 \\ 1 \end{pmatrix} $$.
 
    - Apply the transformation:
-   $$
+  $
    Y = A \cdot X = \begin{pmatrix} 2 & 4 \\ 7 & 6 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 6 \\ 13 \end{pmatrix}
-   $$
+  $
 
-   - Recover $$ X $$ using the inverse:
-   $$
+   - Recover $$X $$using the inverse:
+  $
    X = A^{-1} \cdot Y = \begin{pmatrix} -0.375 & 0.25 \\ 0.4375 & -0.125 \end{pmatrix} \begin{pmatrix} 6 \\ 13 \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
-   $$
+  $
 
 This shows that the inverse successfully recovers the original vector $X$.
 
