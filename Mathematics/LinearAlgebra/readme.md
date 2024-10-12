@@ -270,9 +270,9 @@ In this video, we’ll continue our discussion on **linear algebra** by explorin
 Let’s consider two vectors:
 
 - **Vector P1**:
-  $$\begin{pmatrix} -4, 3\end{pmatrix}$
+  $\begin{pmatrix} -4, 3\end{pmatrix}$
 - **Vector P2**:
-  $$\begin{pmatrix} 5, 3\end{pmatrix}$
+  $\begin{pmatrix} 5, 3\end{pmatrix}$
 
 To add these vectors, we add their respective coordinates:
 
@@ -1131,16 +1131,16 @@ In order for a transformation to be **linear**, it must satisfy two important pr
 
 Where:
 
-- $$T $$is the transformation.
-- $$u $$and $$v $$are vectors.
-- $$c $$is a scalar.
+- $T$ is the transformation.
+- $u$and $v$ are vectors.
+- $c$is a scalar.
 
 ### Example: Reflection Transformation
 
 Let’s go through an example of **reflection** across the y-axis, a transformation that flips a vector across the y-axis.
 
 Given a vector
-$$x = (x_1, y_1)$
+$x = (x_1, y_1)$
  the **reflection transformation** can be defined as:
 
 $$
@@ -1159,7 +1159,7 @@ $$
 
 To perform the transformation, we apply the matrix to the vector
 
-$$( x = (x_1, y_1) )$
+$( x = (x_1, y_1) )$
 
 $$
 T(x) = A \cdot \begin{bmatrix} x_1 \\ y_1 \end{bmatrix} = \begin{bmatrix} -x_1 \\ y_1 \end{bmatrix}
@@ -1178,14 +1178,14 @@ T(u + v) = T(u) + T(v)
 $$
 
 Let
-$$u = (u_1, u_2)$
+$u = (u_1, u_2)$
 
 and
 
-$$v = (v_1, v_2)$
+$v = (v_1, v_2)$
 
  both in
- $$R^2$
+ $R^2$
 We compute the left-hand side (LHS) and right-hand side (RHS) to verify this property.
 
 #### Left-Hand Side
