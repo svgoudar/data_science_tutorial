@@ -162,9 +162,9 @@ A **vector** is an ordered list of numbers that represents both magnitude and di
 #### Vectors in Data Science
 
 - **Student Marks Example**: Consider a dataset with features like **IQ** and **study hours**, and output as **pass/fail**.  
-  - The vector for a record might be $$(90, 3) $$, representing 90 IQ and 3 study hours.
+  - The vector for a record might be $$(90, 3)$$, representing 90 IQ and 3 study hours.
   
-- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $$(70, 72, 75, 73) $$.
+- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $$(70, 72, 75, 73)$$.
 
 #### Plotting Vectors in 2D
 
@@ -183,9 +183,9 @@ A **vector** is an ordered list of numbers that represents both magnitude and di
 
 A **unit vector** has a magnitude of 1 and indicates direction.  
 
-- **Representation**: $$\hat{v} $$represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
+- **Representation**: $$\hat{v}$$ represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
   
-- **Example**: A vector $$(3, 3) $$can be expressed as $$3i + 3j $$, where **i** and **j** are unit vectors in the x and y directions.
+- **Example**: A vector $$(3, 3)$$can be expressed as $$3i + 3j $$, where **i** and **j** are unit vectors in the x and y directions.
 
 ### 5. **Vectors in Machine Learning Models**
 
