@@ -75,7 +75,7 @@ For example, in a **linear regression** model:
 Linear algebra plays a crucial role in this process by:
 
 - **Matrix operations**: Used for calculations like matrix multiplication.
-- **Linear equations**: An example is the equation of a straight line, $$y = mx + c$$.
+- **Linear equations**: An example is the equation of a straight line, $y = mx + c$.
 
 In **linear regression**, we aim to find the correct values of:
 
@@ -147,7 +147,7 @@ A **scalar** is a single numerical value representing magnitude (or quantity) wi
 
 - **Count of Records**: In a dataset, counting the total number of records (e.g., 5 records) is a scalar value.
 - **Average of Features**: Calculating the average of a feature like **age** also yields a scalar value.
-- **Simple Linear Regression**: In the equation $$y = mx + c $$, the **intercept** $$c $$is a scalar value.
+- **Simple Linear Regression**: In the equation $y = mx + c $, the **intercept** $$c $$is a scalar value.
 
 ### 2. **Vectors**
 
@@ -162,30 +162,30 @@ A **vector** is an ordered list of numbers that represents both magnitude and di
 #### Vectors in Data Science
 
 - **Student Marks Example**: Consider a dataset with features like **IQ** and **study hours**, and output as **pass/fail**.  
-  - The vector for a record might be $$(90, 3)$$, representing 90 IQ and 3 study hours.
+  - The vector for a record might be $(90, 3)$, representing 90 IQ and 3 study hours.
   
-- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $$(70, 72, 75, 73)$$.
+- **Weight Over Time**: A vector can also represent values over time, such as a person's weight across months: $(70, 72, 75, 73)$.
 
 #### Plotting Vectors in 2D
 
-- In a **2D coordinate system**, a vector like $$(1, 2) $$can be plotted, where 1 is the x-coordinate, and 2 is the y-coordinate. The distance from the origin can be calculated using the **Pythagorean theorem**.
+- In a **2D coordinate system**, a vector like $(1, 2)$ can be plotted, where 1 is the x-coordinate, and 2 is the y-coordinate. The distance from the origin can be calculated using the **Pythagorean theorem**.
 
 #### Vectors in Machine Learning
 
-- In **machine learning**, each data record can be represented as a vector of features. For example, a student’s **IQ** and **study hours** can form a vector $$(90, 2) $$. Each vector in a dataset represents an individual data point.
+- In **machine learning**, each data record can be represented as a vector of features. For example, a student’s **IQ** and **study hours** can form a vector $(90, 2)$. Each vector in a dataset represents an individual data point.
 
 ### 3. **Vectors in Higher Dimensions**
 
-- **3D Vectors**: Vectors can also represent points in 3D (e.g., $$x, y, z $$coordinates). In **machine learning**, a model can take multiple features (e.g., IQ, study hours, and pass/fail) and represent them in higher dimensions.
+- **3D Vectors**: Vectors can also represent points in 3D (e.g., $x, y, z$ coordinates). In **machine learning**, a model can take multiple features (e.g., IQ, study hours, and pass/fail) and represent them in higher dimensions.
 - **Higher Dimensions**: In data science, we often work with data that has many dimensions (e.g., 100 features), which can be represented as vectors in higher-dimensional space. **Linear algebra** allows us to work with vectors in any number of dimensions.
 
 ### 4. **Unit Vectors**
 
 A **unit vector** has a magnitude of 1 and indicates direction.  
 
-- **Representation**: $$\hat{v}$$ represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
+- **Representation**: $\hat{v}$ represents a unit vector. For example, unit vectors in the x and y directions are denoted as **i** and **j**.
   
-- **Example**: A vector $$(3, 3)$$can be expressed as $$3i + 3j $$, where **i** and **j** are unit vectors in the x and y directions.
+- **Example**: A vector $(3, 3)$ can be expressed as $3i + 3j$, where **i** and **j** are unit vectors in the x and y directions.
 
 ### 5. **Vectors in Machine Learning Models**
 
