@@ -112,6 +112,7 @@ This is done using transformations in linear algebra.
 ### 5. **Optimization**
 
 Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $m$ and intercept $c$ in regression.
+Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $m$ and intercept $c$ in regression.
 
 - **Gradient Descent**: A method used to minimize errors by adjusting parameters.
 - This process is vital in training machine learning models.
@@ -147,7 +148,7 @@ A **scalar** is a single numerical value representing magnitude (or quantity) wi
 
 - **Count of Records**: In a dataset, counting the total number of records (e.g., 5 records) is a scalar value.
 - **Average of Features**: Calculating the average of a feature like **age** also yields a scalar value.
-- **Simple Linear Regression**: In the equation $y = mx + c $, the **intercept** $$c $$is a scalar value.
+- **Simple Linear Regression**: In the equation $y = mx + c$, the **intercept** $c$ is a scalar value.
 
 ### 2. **Vectors**
 
@@ -232,7 +233,7 @@ Vectors are essential for representing movement and interactions in games. They 
 Vectors are fundamental in data science because they provide a way to represent and manipulate data in a structured manner. Here are some key reasons why vectors are needed, along with examples:
 
 1. **Representation of Data Points**:
-   - **Example**: In a dataset where each data point represents an individual with features like age, income, and spending score, each individual can be represented as a vector. For instance, an individual with age 30, income 50,000, and spending score 70 can be represented as a vector: $$[30, 50000, 70]$$.
+   - **Example**: In a dataset where each data point represents an individual with features like age, income, and spending score, each individual can be represented as a vector. For instance, an individual with age 30, income 50,000, and spending score 70 can be represented as a vector: $[30, 50000, 70]$.
 
 2. **Distance Calculations**:
    - Vectors allow for calculations of distances between points, which is crucial in clustering and classification algorithms.
@@ -378,9 +379,7 @@ The **dot product** of two vectors results in a **scalar** and is calculated as 
   - Vector A: (2, 3)
   - Vector B: (4, 5)
   - Dot Product:  
-   $
-    A \cdot B = (2 \times 4) + (3 \times 5) = 8 + 15 = 23
-   $
+   $A \cdot B = (2 \times 4) + (3 \times 5) = 8 + 15 = 23$
 
 - The dot product is widely used in machine learning for vector operations.
 
@@ -397,9 +396,7 @@ On a coordinate plane:
 - **B** points diagonally (2, 2).
   
 To find the dot product:
-$$
-A \cdot B = (5 \times 2) + (0 \times 2) = 10
-$$
+$A \cdot B = (5 \times 2) + (0 \times 2) = 10$
 
 When visualizing, if the vectors are in the **same direction**, the result will be **positive**. If they are in **opposite directions**, the dot product will be **negative**.
 
@@ -415,9 +412,7 @@ The dot product can also be understood geometrically by projecting one vector on
 **Cosine Similarity** is a key application of the dot product in data science. It measures how similar two vectors are, based on the **cosine of the angle** between them.  
 
 - **Cosine similarity** formula:
- $
-  \text{cos}(\theta) = \frac{A \cdot B}{\|A\| \|B\|}
- $
+ $\text{cos}(\theta) = \frac{A \cdot B}{\|A\| \|B\|}$
 - **Cosine similarity** ranges:
   - **-1**: completely dissimilar (opposite vectors)
   - **1**: completely similar (same direction)
@@ -430,22 +425,14 @@ The dot product can also be understood geometrically by projecting one vector on
   
 - To calculate the cosine similarity:
   1. **Dot product** of A and B:
-    $
-     A \cdot B = (1 \times 2) + (2 \times 0) + (0 \times 1) + (3 \times 1) + (1 \times 1) = 6
-    $
+    $A \cdot B = (1 \times 2) + (2 \times 0) + (0 \times 1) + (3 \times 1) + (1 \times 1) = 6$
   2. Calculate the **magnitude** of A and B:
      - Magnitude of A:  
-      $
-       \|A\| = \sqrt{(1^2 + 2^2 + 0^2 + 3^2 + 1^2)} = \sqrt{15} \approx 3.872
-      $
+      $\|A\| = \sqrt{(1^2 + 2^2 + 0^2 + 3^2 + 1^2)} = \sqrt{15} \approx 3.872$
      - Magnitude of B:  
-      $
-       \|B\| = \sqrt{(2^2 + 0^2 + 1^2 + 1^2 + 1^2)} = \sqrt{7} \approx 2.646
-      $
+      $\|B\| = \sqrt{(2^2 + 0^2 + 1^2 + 1^2 + 1^2)} = \sqrt{7} \approx 2.646$
   3. **Cosine similarity**:
-    $
-     \text{cos}(\theta) = \frac{6}{(3.872 \times 2.646)} \approx 0.586
-    $
+    $\text{cos}(\theta) = \frac{6}{(3.872 \times 2.646)} \approx 0.586$
   
 - This score of **0.586** (58.6%) indicates that **Movie B** is fairly similar to **Avengers**, making it a good recommendation.
 
