@@ -770,7 +770,6 @@ Your explanation of the mathematical intuition behind PCA (Principal Component A
 - **Selection of Principal Components:**
   - The eigenvector with the largest eigenvalue is chosen as the principal component because it captures the most variance in the data.
 
-
 It sounds like you're preparing an engaging and educational video on eigenvectors and eigenvalues, particularly in the context of principal component analysis (PCA) and linear transformations. Here’s a refined version of your script with added clarity and structure:
 
 ---
@@ -778,35 +777,41 @@ It sounds like you're preparing an engaging and educational video on eigenvector
 ## Video Script: Understanding Eigenvectors and Eigenvalues
 
 **Introduction:**
-In this video, we will discuss the concepts of eigenvectors and eigenvalues, which play a crucial role in understanding principal component analysis (PCA). As mentioned in my previous video, PCA helps us find the best principal component line that captures the maximum variance in our data. 
+In this video, we will discuss the concepts of eigenvectors and eigenvalues, which play a crucial role in understanding principal component analysis (PCA). As mentioned in my previous video, PCA helps us find the best principal component line that captures the maximum variance in our data.
 
 ### What Are Eigenvectors and Eigenvalues?
-Eigenvectors and eigenvalues help us achieve this goal. To visualize this, let’s consider a set of data points. We want to determine a principal component line that maximizes variance when we project our data onto it. 
+
+Eigenvectors and eigenvalues help us achieve this goal. To visualize this, let’s consider a set of data points. We want to determine a principal component line that maximizes variance when we project our data onto it.
 
 **Importance of Eigenvectors and Eigenvalues:**
 The amazing aspect of eigenvectors and eigenvalues is their ability to describe how a linear transformation affects a vector. If we have a specific matrix $A$ and a vector $v$, applying a linear transformation defined by this matrix can help us derive an eigenvalue $\lambda$ and its corresponding eigenvector.
 
-### Linear Transformation:
-Let’s break down what a linear transformation means. Imagine our data is arranged in a grid. When we apply a linear transformation to a vector in this grid, the entire dataset can be shifted or rotated in various directions. 
+### Linear Transformation
+
+Let’s break down what a linear transformation means. Imagine our data is arranged in a grid. When we apply a linear transformation to a vector in this grid, the entire dataset can be shifted or rotated in various directions.
 
 For example, if we apply the matrix $A$ to vector $v$, the equation we use is:
 
 $$ A \cdot v = \lambda \cdot v $$
 
-Here, $\lambda$ represents the eigenvalue associated with the eigenvector $v$. 
+Here, $\lambda$ represents the eigenvalue associated with the eigenvector $v$.
 
-### Finding the Best Principal Component:
-To find the eigenvalues and eigenvectors, we need to identify which eigenvector has the largest magnitude, as this will correspond to the direction of maximum variance—essentially our best principal component. 
+### Finding the Best Principal Component
 
-### Example:
-Let’s see an example. Suppose we have a vector $v = (1, 1)$. After applying our matrix transformation, we might get a new point, say $(4, 2)$. Here, the eigenvalue $\lambda$ can be represented as $(4, 2)$ after the transformation. 
+To find the eigenvalues and eigenvectors, we need to identify which eigenvector has the largest magnitude, as this will correspond to the direction of maximum variance—essentially our best principal component.
 
-We can visualize this in a coordinate system. The transformation shifts our initial vector to a new direction, and the length of the transformed vector indicates its magnitude. 
+### Example
+
+Let’s see an example. Suppose we have a vector $v = (1, 1)$. After applying our matrix transformation, we might get a new point, say $(4, 2)$. Here, the eigenvalue $\lambda$ can be represented as $(4, 2)$ after the transformation.
+
+We can visualize this in a coordinate system. The transformation shifts our initial vector to a new direction, and the length of the transformed vector indicates its magnitude.
 
 Now, if we consider another point, say $(-1, 0)$, the transformation will yield a different result, $(-2, 2)$. By repeating this for various vectors, we can observe how the transformation affects their directions and magnitudes.
 
-### Steps to Calculate Eigenvalues and Eigenvectors:
+### Steps to Calculate Eigenvalues and Eigenvectors
+
 Let’s outline the steps to compute the eigenvalues and eigenvectors:
+
 1. **Calculate the Covariance Matrix:**
    For features $x$ and $y$, we compute the covariance:
    $$
@@ -824,4 +829,65 @@ Let’s outline the steps to compute the eigenvalues and eigenvectors:
    With the covariance matrix $A$, we apply it to a vector $v$ to derive eigenvalues $\lambda_1$ and $\lambda_2$.
 
 3. **Identify Principal Components:**
-   The eigenvector corresponding to the highest eigenvalue will represent the principal component that captures the maximum variance. 
+   The eigenvector corresponding to the highest eigenvalue will represent the principal component that captures the maximum variance.
+
+## Deep learning
+
+This is a great introduction to the concept of a perceptron! Here's a structured version of your script to enhance clarity and engagement:
+
+---
+
+### Introduction to Perceptrons
+
+**What is a Perceptron?**  
+A perceptron is a fundamental unit of a neural network, often referred to as a single-layer neural network. In this video, we’ll explore its architecture, how it functions, and its role in binary classification tasks.
+
+### What We Will Cover
+
+1. **Basic Structure of a Perceptron**
+2. **Input Layer, Hidden Layer, Weights, and Activation Function**
+3. **Example: Predicting Pass/Fail Based on IQ and Study Hours**
+4. **Advantages and Disadvantages of Perceptrons**
+5. **Transitioning to Multi-Layer Neural Networks**
+
+### The Architecture of a Perceptron
+
+Let's begin with the basic structure of a perceptron:
+
+1. **Input Layer**: This consists of the features that we will use for predictions. In our case, we have:
+   - **X1**: IQ
+   - **X2**: Number of Study Hours
+
+2. **Hidden Layer**: This layer contains neurons that process the inputs. For a perceptron, we typically have one neuron in this hidden layer.
+
+### Example: Binary Classification Task
+
+Let’s illustrate this with a simple dataset. We have three data points:
+
+- **(IQ: 95, Study Hours: 3)** → **Fail**
+- **(IQ: 110, Study Hours: 4)** → **Pass**
+- **(IQ: 100, Study Hours: 5)** → **Pass**
+
+We want to create a perceptron that can predict whether a student will pass or fail based on their IQ and study hours.
+
+### Steps in the Perceptron
+
+1. **Inputs and Weights**: Each input (X1 and X2) will be multiplied by corresponding weights (W1 and W2).
+   - Example:
+     - For X1 (IQ) and X2 (Study Hours), we initialize weights W1 and W2.
+
+2. **Summation and Bias**: We will sum the products of the inputs and weights, adding a bias (B) to prevent activation saturation.
+   - The formula looks like:
+   $$
+   Z = W1 \times X1 + W2 \times X2 + B
+   $$
+
+3. **Activation Function**: The final output is obtained by applying an activation function to the summation (Z). This function transforms the raw output into a usable format.
+   - For instance, a **sigmoid function** transforms outputs between 0 and 1, while a **step function** can output binary values (0 or 1).
+
+### Importance of Weights and Bias
+
+Let’s talk about the significance of weights and bias.
+
+- **Weights** determine the strength of the influence each input has on the output.
+- **Bias** ensures that even when all weights are zero, the neuron can still be activated, allowing for more flexibility in model training.
