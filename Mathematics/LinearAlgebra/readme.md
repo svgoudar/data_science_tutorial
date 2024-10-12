@@ -79,8 +79,8 @@ Linear algebra plays a crucial role in this process by:
 
 In **linear regression**, we aim to find the correct values of:
 
-- $$m$$: Slope (or coefficient)
-- $$c$$: Intercept
+ $m$: Slope (or coefficient)
+ $c$: Intercept
 
 By solving linear equations, the model finds the **best fit line** that minimizes the error between the predicted and actual values.
 
@@ -111,7 +111,7 @@ This is done using transformations in linear algebra.
 
 ### 5. **Optimization**
 
-Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $$m$$and intercept $$c$$in regression.
+Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $m$ and intercept $c$ in regression.
 
 - **Gradient Descent**: A method used to minimize errors by adjusting parameters.
 - This process is vital in training machine learning models.
@@ -147,7 +147,7 @@ A **scalar** is a single numerical value representing magnitude (or quantity) wi
 
 - **Count of Records**: In a dataset, counting the total number of records (e.g., 5 records) is a scalar value.
 - **Average of Features**: Calculating the average of a feature like **age** also yields a scalar value.
-- **Simple Linear Regression**: In the equation $y = mx + c $, the **intercept** $$c $$is a scalar value.
+- **Simple Linear Regression**: In the equation $y = mx + c$, the **intercept** $c$ is a scalar value.
 
 ### 2. **Vectors**
 
@@ -232,7 +232,7 @@ Vectors are essential for representing movement and interactions in games. They 
 Vectors are fundamental in data science because they provide a way to represent and manipulate data in a structured manner. Here are some key reasons why vectors are needed, along with examples:
 
 1. **Representation of Data Points**:
-   - **Example**: In a dataset where each data point represents an individual with features like age, income, and spending score, each individual can be represented as a vector. For instance, an individual with age 30, income 50,000, and spending score 70 can be represented as a vector: $$[30, 50000, 70]$$.
+   - **Example**: In a dataset where each data point represents an individual with features like age, income, and spending score, each individual can be represented as a vector. For instance, an individual with age 30, income 50,000, and spending score 70 can be represented as a vector: $[30, 50000, 70]$.
 
 2. **Distance Calculations**:
    - Vectors allow for calculations of distances between points, which is crucial in clustering and classification algorithms.
