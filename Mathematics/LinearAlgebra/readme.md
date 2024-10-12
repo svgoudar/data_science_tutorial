@@ -79,8 +79,8 @@ Linear algebra plays a crucial role in this process by:
 
 In **linear regression**, we aim to find the correct values of:
 
-- $$m$$: Slope (or coefficient)
-- $$c$$: Intercept
+- $m$: Slope (or coefficient)
+- $c$: Intercept
 
 By solving linear equations, the model finds the **best fit line** that minimizes the error between the predicted and actual values.
 
@@ -111,7 +111,7 @@ This is done using transformations in linear algebra.
 
 ### 5. **Optimization**
 
-Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $$m$$and intercept $$c$$in regression.
+Optimization involves solving equations to find the best values of parameters that minimize error, like finding the best slope $m$ and intercept $c$ in regression.
 
 - **Gradient Descent**: A method used to minimize errors by adjusting parameters.
 - This process is vital in training machine learning models.
@@ -548,9 +548,9 @@ Consider an **e-commerce** website where we perform **feature engineering** to c
 
 | Product | Cost  | Discount |  
 |---------|-------|----------|  
-| A       | $1000 | 10%      |  
-| B       | $500  | 20%      |  
-| C       | $200  | 15%      |  
+| A       | 1000 | 10%      |  
+| B       | 500  | 20%      |  
+| C       | 200  | 15%      |  
 
 - **Cost** vector: (1000, 500, 200)
 - **Discount** vector: (0.1, 0.2, 0.15)
@@ -1126,8 +1126,8 @@ A **linear transformation** is a function between two vector spaces that preserv
 
 In order for a transformation to be **linear**, it must satisfy two important properties:
 
-1. **Additivity**: $$T(u + v) = T(u) + T(v)$
-2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
+1. **Additivity**: $T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $T(c \cdot u) = c \cdot T(u)$
 
 Where:
 
@@ -1193,6 +1193,7 @@ We compute the left-hand side (LHS) and right-hand side (RHS) to verify this pro
 $$
 u + v = (u_1 + v_1, u_2 + v_2)
 $$
+
 $$
 T(u + v) = \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} u_1 + v_1 \\ u_2 + v_2 \end{bmatrix} = (- (u_1 + v_1), u_2 + v_2)
 $$
@@ -1225,6 +1226,7 @@ Let’s consider a scalar  c . We compute the left-hand side (LHS) and right-han
 $$
 c \cdot u = (c \cdot u_1, c \cdot u_2)
 $$
+
 $$
 T(c \cdot u) = \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} c \cdot u_1 \\ c \cdot u_2 \end{bmatrix} = \begin{bmatrix} -c \cdot u_1 \\ c \cdot u_2 \end{bmatrix}
 $$
@@ -1496,8 +1498,8 @@ In this video, we will continue our discussion on **linear transformations**, an
 
 Just to recap, a linear transformation takes a vector from one space and converts it into another, while satisfying two important conditions:
 
-1. **Additivity**: $$T(u + v) = T(u) + T(v)$
-2. **Homogeneity**: $$T(c \cdot u) = c \cdot T(u)$
+1. **Additivity**: $T(u + v) = T(u) + T(v)$
+2. **Homogeneity**: $T(c \cdot u) = c \cdot T(u)$
 
 In this visualization, we will focus on **one-dimensional** and **two-dimensional** transformations to help you see what happens to the vectors as they get transformed.
 
@@ -1511,16 +1513,16 @@ T(x) = 2x
 $$
 This means we multiply each value by 2. Visually, let’s take an axis:
 
-- Positive axis: $$1, 2, 3, 4$
-- Negative axis: $$-1, -2, -3, -4$
+- Positive axis: $1, 2, 3, 4$
+- Negative axis: $-1, -2, -3, -4$
 
 When we apply this transformation:
 
-- $$T(0) = 0 $$(origin remains at zero)
-- $$T(1) = 2$
-- $$T(2) = 4$
-- $$T(-1) = -2$
-- $$T(-2) = -4$
+- $T(0) = 0 $(origin remains at zero)
+- $T(1) = 2$
+- $T(2) = 4$
+- $T(-1) = -2$
+- $T(-2) = -4$
 
 What you notice is that the **scale changes**, but the points remain on a straight line. This scaling transformation stretches the space but **keeps everything linear**, which is a hallmark of a linear transformation. The origin remains fixed and the line remains straight, as required.
 
@@ -1875,8 +1877,8 @@ $$
 
 1. **Preservation**: The identity function does not alter any element. The image of any element under the identity function is the element itself.
 2. **Linearity**: The identity function is a **linear transformation**. It satisfies:
-   - **Additivity**: $$I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v})$
-   - **Homogeneity**: $$I(c \mathbf{u}) = c I(\mathbf{u})$
+   - **Additivity**: $I(\mathbf{u} + \mathbf{v}) = I(\mathbf{u}) + I(\mathbf{v})$
+   - **Homogeneity**: $I(c \mathbf{u}) = c I(\mathbf{u})$
 
 In short, the identity function preserves elements and is its own inverse.
 
