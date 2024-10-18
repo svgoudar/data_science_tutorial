@@ -521,7 +521,8 @@ That’s a fantastic overview of measures of central tendency! Here’s a struct
    - **Formulas**:
      - Population Mean:
        $$
-        \mu = \frac{\sum_{i=1}^{N} x_i}{N}$$
+        \mu = \frac{\sum_{i=1}^{N} x_i}{N}
+       $$
      - Sample Mean:$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$
    - **Characteristics**:
      - Affected by extreme outliers.
@@ -577,10 +578,12 @@ That’s a fantastic overview of measures of central tendency! Here’s a struct
 1. **Mean**
    - **Definition**: The sum of all values divided by the number of values.
    - **Notation**:
-     - Population Mean:$$\mu$$
-     - Sample Mean:$$\bar{x}$$
+     - Population Mean:
+       $\mu$
+     - Sample Mean:
+       $\bar{x}$
    - **Formulas**:
-     - Population Mean:$$\mu = \frac{\sum_{i=1}^{N} x_i}{N}$$
+     - Population Mean: $\mu = \frac{\sum_{i=1}^{N} x_i}{N}$
      - Sample Mean:$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
    - **Characteristics**:
      - Affected by extreme outliers.
