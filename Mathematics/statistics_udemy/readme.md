@@ -579,7 +579,7 @@ That’s a fantastic overview of measures of central tendency! Here’s a struct
    - **Definition**: The sum of all values divided by the number of values.
    - **Notation**:
      - Population Mean:
-       $\mu$
+       `$\mu$`
      - Sample Mean:
        $\bar{x}$
    - **Formulas**:
