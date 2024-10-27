@@ -578,11 +578,11 @@ That’s a fantastic overview of measures of central tendency! Here’s a struct
 1. **Mean**
    - **Definition**: The sum of all values divided by the number of values.
    - **Notation**:
-     - Population Mean: $\mu$
-     - Sample Mean: $\bar{x}$
+     - Population Mean:$\mu$
+     - Sample Mean:$$\bar{x}$$
    - **Formulas**:
-     - Population Mean:$\mu = \frac{\sum_{i=1}^{N} x_i}{N}$
-     - Sample Mean:$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$
+     - Population Mean:$$\mu = \frac{\sum_{i=1}^{N} x_i}{N}$$
+     - Sample Mean:$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
    - **Characteristics**:
      - Affected by extreme outliers.
      - Suitable for interval and ratio data.
@@ -643,7 +643,7 @@ In this video, we'll cover **range**, **variance**, and **standard deviation**, 
 **Definition**: The range is the difference between the maximum and minimum values in a dataset.
 
 **Formula**:  
-$\text{Range} = \text{Max Value} - \text{Min Value}$
+$ \text{Range} = \text{Max Value} - \text{Min Value}$
 
 **Example**:  
 Let’s say we have the ages of people: 14, 13, 10, 20, 25, 75, and 15.  
@@ -758,9 +758,9 @@ The key difference is that for the **population variance**, we divide by$N$, whi
 
 #### Why Not Just Divide by$$n$$ in Sample Variance?
 
-Imagine you randomly select a **sample** from a population. The goal of sample statistics (like sample variance) is to estimate population parameters (like population variance). However, if we use $n$ as the denominator when calculating the sample variance, we tend to **underestimate** the actual population variance. This happens because the sample mean $\bar{x}$ is typically **closer** to the sample points compared to the population mean $\mu$. As a result, the distances$(x_i - \bar{x})^2$ tend to be smaller than they would be if we were calculating using the population mean.
+Imagine you randomly select a **sample** from a population. The goal of sample statistics (like sample variance) is to estimate population parameters (like population variance). However, if we use$$n$$ as the denominator when calculating the sample variance, we tend to **underestimate** the actual population variance. This happens because the sample mean$\bar{x}$ is typically **closer** to the sample points compared to the population mean$\mu$. As a result, the distances$(x_i - \bar{x})^2$ tend to be smaller than they would be if we were calculating using the population mean.
 
-In other words, when we calculate the variance of a sample using $n$, we do not account for the fact that the sample is only an **approximation** of the population, and therefore we end up with a **biased** estimate that underestimates the true population variance.
+In other words, when we calculate the variance of a sample using$$n$$, we do not account for the fact that the sample is only an **approximation** of the population, and therefore we end up with a **biased** estimate that underestimates the true population variance.
 
 ### Bessel's Correction
 
@@ -814,7 +814,7 @@ A **random variable** is a function whose values are derived from a specific pro
    In this case, we are defining a function (the random variable) based on the process of tossing a coin, and it gives us specific numerical values based on the outcome of that experiment.
 
 2. **Rolling a dice:**
-   Another example is rolling a fair dice. Here, the random variable $X$ could represent the number that appears when you roll the dice. The possible values of$ X$ would be 1, 2, 3, 4, 5, or 6, depending on the outcome of the roll.
+   Another example is rolling a fair dice. Here, the random variable$ X$ could represent the number that appears when you roll the dice. The possible values of$ X$ would be 1, 2, 3, 4, 5, or 6, depending on the outcome of the roll.
 
 These are simple cases where random variables take on discrete values based on an experiment.
 
@@ -894,8 +894,8 @@ Your explanation of the five-number summary and its relevance in statistics is c
 
 3. **Outlier Detection**:
    - **Interquartile Range (IQR)**: Calculated as$\text{IQR} = Q3 - Q1$.
-   - **Lower Fence**: $\text{Lower Fence} = Q1 - 1.5 \times \text{IQR}$.
-   - **Upper Fence**: $\text{Upper Fence} = Q3 + 1.5 \times \text{IQR}$.
+   - **Lower Fence**:$ \text{Lower Fence} = Q1 - 1.5 \times \text{IQR}$.
+   - **Upper Fence**:$ \text{Upper Fence} = Q3 + 1.5 \times \text{IQR}$.
    - Any value below the lower fence or above the upper fence is considered an outlier.
 
 4. **Example**:
@@ -1172,8 +1172,8 @@ That was a great session explaining the **multiplication rule** for **independen
 
 - **Definition**: Two events are independent if the occurrence of one does not affect the occurrence of the other.
 - **Examples**:
-  - Tossing a coin twice. The probability of getting a head or tail on the second toss is not affected by the result of the first toss. Each event has a probability of $\frac{1}{2}$.
-  - Rolling a dice. Getting a "1" on the first roll does not affect the probability of getting a "2" on the second roll, both being $\frac{1}{6}$.
+  - Tossing a coin twice. The probability of getting a head or tail on the second toss is not affected by the result of the first toss. Each event has a probability of$ \frac{1}{2}$.
+  - Rolling a dice. Getting a "1" on the first roll does not affect the probability of getting a "2" on the second roll, both being$ \frac{1}{6}$.
 - **Multiplication Rule**: The probability of both events occurring is the product of their individual probabilities.
 $
   P(A \text{ and } B) = P(A) \times P(B)
@@ -1192,7 +1192,7 @@ $
 $
   P(A \text{ and } B) = P(A) \times P(B | A)
 $
-  Where $P(B | A)$ is the **conditional probability**, meaning the probability of event$ $B$ given that$ $A$ has already occurred.
+  Where$ P(B | A)$ is the **conditional probability**, meaning the probability of event$ B$ given that$ A$ has already occurred.
   
   Example: Probability of drawing a King followed by a Queen from a deck of 52 cards without replacement:
 $
@@ -1201,7 +1201,7 @@ $
 
 ### Conditional Probability
 
-- This is a key concept for **dependent events** where the probability of an event $B$ depends on another event$A$ having already occurred.
+- This is a key concept for **dependent events** where the probability of an event$B$ depends on another event$A$ having already occurred.
 $
   P(B | A) = \frac{P(A \text{ and } B)}{P(A)}
 $
@@ -1239,11 +1239,11 @@ There are two main types of Probability Distribution Functions:
 
 #### 1. Probability Mass Function (PMF)
 
-The **PMF** represents the probability of a discrete random variable. For example, when rolling a **fair dice**, the possible outcomes are 1, 2, 3, 4, 5, and 6, and the probability for each outcome is the same, i.e.,$\frac{1}{6}$.
+The **PMF** represents the probability of a discrete random variable. For example, when rolling a **fair dice**, the possible outcomes are 1, 2, 3, 4, 5, and 6, and the probability for each outcome is the same, i.e.,$ \frac{1}{6}$.
 
-To visualize this, we plot the possible outcomes on the x-axis and the probability values on the y-axis. For each outcome (1 through 6), we draw a bar representing a probability of $\frac{1}{6}$.
+To visualize this, we plot the possible outcomes on the x-axis and the probability values on the y-axis. For each outcome (1 through 6), we draw a bar representing a probability of$ \frac{1}{6}$.
 
-- **PMF** Example: The probability of rolling a number less than or equal to 2 is the sum of the probabilities for 1 and 2, i.e.,$\frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$.
+- **PMF** Example: The probability of rolling a number less than or equal to 2 is the sum of the probabilities for 1 and 2, i.e.,$ \frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$.
 
 #### 2. Probability Density Function (PDF)
 
@@ -1262,7 +1262,7 @@ Let’s take the example of **ages**. The x-axis represents age, and the y-axis 
 
 In both PMF and PDF, we also work with the **Cumulative Distribution Function (CDF)**. The **CDF** helps us calculate the cumulative probability, i.e., the probability that the random variable takes a value **less than or equal to** a given point.
 
-For the dice example, the **CDF** at 2 is the sum of the probabilities of 1 and 2, which equals $\frac{2}{6}$. For a continuous random variable like age, the CDF helps calculate the probability that the age is less than or equal to a certain value, say 35 or 40.
+For the dice example, the **CDF** at 2 is the sum of the probabilities of 1 and 2, which equals$ \frac{2}{6}$. For a continuous random variable like age, the CDF helps calculate the probability that the age is less than or equal to a certain value, say 35 or 40.
 
 #### Key Features of CDF
 
@@ -1574,9 +1574,9 @@ Many real-world data points tend to follow a normal distribution. Some examples 
 
 One of the key assumptions of the normal distribution is the **empirical rule**, also known as the **68-95-99.7 rule**. This rule describes how the data is distributed around the mean:
 
-1. **68%** of the data falls within **1 standard deviation** from the mean ($\mu \pm \sigma$ ).
-2. **95%** of the data falls within **2 standard deviations** ($\mu \pm 2\sigma$ ).
-3. **99.7%** of the data falls within **3 standard deviations** ($\mu \pm 3\sigma$ ).
+1. **68%** of the data falls within **1 standard deviation** from the mean ($ \mu \pm \sigma$ ).
+2. **95%** of the data falls within **2 standard deviations** ($ \mu \pm 2\sigma$ ).
+3. **99.7%** of the data falls within **3 standard deviations** ($ \mu \pm 3\sigma$ ).
 
 This means that in a dataset that follows a normal distribution, most of the data will fall close to the mean, with fewer data points found in the tails.
 
@@ -1837,7 +1837,7 @@ $$
    - The relationship between the mean, median, and mode is crucial here: in a right-skewed distribution, **mode < median < mean**.
 
 3. **Transformation Between Log-Normal and Normal Distributions**:
-   - If $X$ is log-normally distributed, then$Y = \ln(X)$ is normally distributed. Conversely, if $Y$ is normally distributed, then $X = e^Y$ is log-normally distributed. This duality highlights the connection between normal and log-normal distributions.
+   - If$ X$ is log-normally distributed, then$ Y = \ln(X)$ is normally distributed. Conversely, if$ Y$ is normally distributed, then$ X = e^Y$ is log-normally distributed. This duality highlights the connection between normal and log-normal distributions.
 
 4. **Checking Log-Normality**:
    - To check if data follows a log-normal distribution, we use a **Q-Q plot** (Quantile-Quantile plot), a statistical tool that compares the distribution of the data against a theoretical log-normal distribution.
@@ -1963,7 +1963,7 @@ In this video, we explored the concept of **estimates** within the context of in
 
 1. **Point Estimate**
    - A **point estimate** is a single numerical value that estimates an unknown population parameter.
-   - **Example**: The sample mean ($\bar{x}$) is a point estimate of the population mean ($\mu$).
+   - **Example**: The sample mean ($ \bar{x}$) is a point estimate of the population mean ($ \mu$).
      - For instance, if you have population data and draw a sample, the sample mean serves as a point estimate of the population mean.
 
 2. **Interval Estimate**
@@ -2226,7 +2226,7 @@ To grasp Bayes theorem, we first need to discuss some fundamental probability co
 
 **Independent events** are those where the outcome of one event does not affect the outcome of another.
 
-**Example:** Consider rolling a die. The possible outcomes are 1, 2, 3, 4, 5, or 6. The probability of rolling a 1 is $\frac{1}{6}$, the probability of rolling a 2 is also $\frac{1}{6}$, and so on. Each roll is independent of previous rolls; knowing the result of one roll does not influence the next.
+**Example:** Consider rolling a die. The possible outcomes are 1, 2, 3, 4, 5, or 6. The probability of rolling a 1 is$ \frac{1}{6}$, the probability of rolling a 2 is also$ \frac{1}{6}$, and so on. Each roll is independent of previous rolls; knowing the result of one roll does not influence the next.
 
 Another example is tossing a coin. The probability of getting heads is 0.5, and the probability of getting tails is also 0.5. Again, each toss is independent.
 
