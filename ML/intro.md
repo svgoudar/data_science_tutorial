@@ -273,3 +273,174 @@ This implies that the vectors $\mathbf{w}$ and $\mathbf{x}$ are **perpendicular*
 - A **plane** in 3D: $w_1 x_1 + w_2 x_2 + w_3 x_3 + b = 0$
 - A **hyperplane** in $n$ -dimensional space: $\mathbf{w}^T \mathbf{x} + b = 0$
 - The condition $\mathbf{w}^T \mathbf{x} = 0$ indicates that $\mathbf{w}$ and $\mathbf{x}$ are perpendicular.
+
+Here's a structured script based on your provided content for a video on **"Finding the Distance of a Point from a Plane"**:
+
+---
+
+### [Step 1: Introducing the Concept of a Plane]
+
+"Let's start by considering a plane, which we'll denote as π (pi). If this plane passes through the origin, its equation can be written as:
+
+$
+\mathbf{w}^T \mathbf{x} = 0
+$
+
+We've discussed this equation in our previous video. Here, **w** is a vector that's perpendicular (normal) to the plane. This vector **w** plays a key role in determining the orientation of the plane in our space."
+
+---
+
+### [Step 2: Understanding the Point in Space]
+
+"Now, let's say we have a point **S** in space. This point **S** has coordinates $(x_1, x_2, ..., x_n)$. For simplicity, let's consider this in an $n$-dimensional space.
+
+Our objective is to find the shortest distance from this point **S** to the plane **π**. This distance is important because, in classification algorithms like Logistic Regression and SVM, we often need to measure distances from data points to a decision boundary (which can be thought of as a plane in higher dimensions)."
+
+---
+
+### [Step 3: Deriving the Distance Formula]
+
+"To find this distance, we can use a known formula. If **w** is a normal vector to the plane, and **S** is the point from which we want to measure the distance, the formula for the distance $d$ from the point to the plane is:
+
+$
+d = \frac{\mathbf{w}^T \mathbf{s}}{\|\mathbf{w}\|}
+$
+
+Here:
+
+- $\mathbf{w}^T \mathbf{s}$ is the dot product of the vectors **w** and **s**.
+- $\|\mathbf{w}\|$ is the magnitude (or length) of the vector **w**.
+
+This formula gives us the perpendicular distance from the point to the plane."
+
+---
+
+### [Step 4: Understanding the Dot Product and Angle]
+
+"Let’s break this down a bit further. The dot product $\mathbf{w}^T \mathbf{s}$ can also be expressed as:
+
+$
+\mathbf{w}^T \mathbf{s} = \|\mathbf{w}\| \|\mathbf{s}\| \cos(\theta)
+$
+
+Where:
+
+- $\|\mathbf{w}\|$ and $\|\mathbf{s}\|$ are the magnitudes of vectors **w** and **s**.
+- $\theta$ is the angle between **w** and **s**.
+
+So, in our distance formula, we're essentially dividing out the magnitude of **w**, leaving us with a measure that scales by how aligned **s** is with **w**."
+
+---
+
+### [Step 5: Analyzing the Direction (Positive and Negative Distances)]
+
+"Here’s an interesting observation:
+
+- If the point **S** lies **above** the plane (in the same direction as **w**), the angle $\theta$ between **w** and **s** is less than 90 degrees. This means that $\cos(\theta)$ is positive, resulting in a positive distance.
+- If the point **S'** lies **below** the plane (opposite to **w**), the angle $\theta$ between **w** and **s'** is greater than 90 degrees but less than 270 degrees. Here, $\cos(\theta)$ is negative, resulting in a negative distance.
+
+This positive or negative value indicates on which side of the plane the point lies. Points on the same side as **w** will have a positive distance, while points on the opposite side will have a negative distance. This concept is particularly useful in Support Vector Machines, where the sign of the distance helps classify data points."
+
+---
+
+### [Step 6: Real-World Application in SVM]
+
+"Let’s connect this to Support Vector Machines (SVM):
+
+- SVM uses the concept of maximizing the margin between two classes of points. The margin is defined by measuring the perpendicular distance of points from the decision boundary (which is essentially a plane in higher dimensions).
+- The decision boundary is the plane where $\mathbf{w}^T \mathbf{x} + b = 0$, and SVM tries to maximize this margin, ensuring that points on either side are correctly classified."
+
+### Instance-Based Learning vs. Model-Based Learning
+
+In this video, we're diving into the key differences between **instance-based learning** and **model-based learning** in machine learning. These two approaches define how models learn from data to make predictions, whether for **regression** or **classification** tasks. Let's break down each technique and understand how they work.
+
+---
+
+### What is Instance-Based Learning?
+
+Instance-based learning, as the name suggests, relies heavily on the training data it has seen. It's like a **domain expert** that memorizes examples and uses them to make predictions for new data points. In this approach:
+
+- The model does **not learn patterns** or relationships in the data ahead of time.
+- Instead, it stores the training data and makes predictions by comparing new inputs to existing examples.
+- This is analogous to **memorizing** rather than understanding.
+
+#### How It Works
+
+- Let's say you have a dataset with features such as:
+  - **Play Hours**
+  - **Study Hours**
+  - **Pass/Fail Outcome**
+
+- Suppose you want to predict whether a student will pass or fail based on these features. If a new student's data point comes in, the model looks at the **surrounding training data**.
+- For instance, if most neighbors of the new data point are labeled as "Fail," the model will predict "Fail" for the new student.
+  
+- Example Algorithm: **K-Nearest Neighbors (KNN)**
+  - In KNN, a new query point is classified based on the majority label of its nearest neighbors.
+
+#### Characteristics of Instance-Based Learning
+
+- **No Pattern Recognition**: It does not generalize patterns but instead focuses on finding similarities with existing data.
+- **Lazy Learning**: It postpones learning until it receives a query. Thus, it’s also known as a **lazy learner**.
+- **Storage**: It requires storing the entire dataset to make future predictions, which can be computationally expensive for large datasets.
+  
+---
+
+### What is Model-Based Learning?
+
+In contrast, model-based learning seeks to **understand patterns** in the data and **generalize** from those patterns. The goal is to learn a mathematical representation that can predict outcomes for new, unseen data.
+
+- Here, the model goes beyond memorization by discovering **underlying patterns** and trends in the training data.
+- The model builds a **generalized function** or **decision boundary** that can be used for future predictions.
+
+#### How It Works
+
+- Let's consider the same dataset with **Play Hours**, **Study Hours**, and **Pass/Fail Outcome**.
+- A model-based learning approach would analyze the data to understand the relationship between play hours, study hours, and the pass/fail outcome.
+- It may create a **decision boundary** (like a curve or a line) that separates the "Pass" and "Fail" regions. This boundary helps classify future data points effectively.
+  
+- Example Algorithms: **Linear Regression, Logistic Regression, Neural Networks**
+  - These models try to fit a line (or curve) that best separates the classes or predicts the output.
+
+#### Characteristics of Model-Based Learning
+
+- **Pattern Recognition**: It focuses on identifying patterns and trends, creating a model that can make predictions even if the data changes slightly.
+- **Eager Learning**: It is called an **eager learner** because it tries to learn a model during the training phase itself.
+- **Storage**: Instead of storing the entire dataset, it stores the **parameters** of the model, such as weights in a neural network.
+- **Generalization**: Aims to build a **generalized solution** that can handle new, unseen data effectively.
+
+---
+
+### Key Differences: Instance-Based vs. Model-Based Learning
+
+| **Feature**                        | **Instance-Based Learning**                      | **Model-Based Learning**                            |
+|------------------------------------|--------------------------------------------------|-----------------------------------------------------|
+| **Learning Approach**              | Memorizes training data                          | Learns patterns and generalizes                     |
+| **Example Algorithms**             | K-Nearest Neighbors (KNN), Kernel Methods        | Linear Regression, Decision Trees, Neural Networks  |
+| **Prediction Method**             | Based on nearest neighbors                       | Based on learned model parameters                   |
+| **Storage Requirements**           | Stores the entire dataset                        | Stores only model parameters (e.g., weights, biases)|
+| **Generalization**                 | Low generalization capability                    | High generalization capability                      |
+| **Learning Type**                 | Lazy learning (only when query is received)      | Eager learning (learns during training phase)       |
+| **Decision Making**                | Depends on specific instances                    | Uses generalized rules (e.g., decision boundary)    |
+| **Pattern Discovery**              | No pattern recognition                           | Discovers patterns during training                  |
+| **Scalability**                    | Less scalable for large datasets                 | More scalable with proper model tuning              |
+
+---
+
+### Example Use Cases
+
+1. **Instance-Based Learning**:
+   - **Spam Detection**: A KNN model can detect spam emails by comparing the features of new emails with previously labeled spam emails.
+   - **Personalized Recommendations**: Recommender systems that suggest items based on user similarity.
+
+2. **Model-Based Learning**:
+   - **Predicting House Prices**: Using a linear regression model to predict prices based on features like area, number of rooms, and location.
+   - **Fraud Detection**: Using logistic regression or neural networks to classify transactions as fraudulent or legitimate.
+
+---
+
+### Conclusion
+
+- **Instance-Based Learning** is like **memorizing** examples and making decisions based on them. It is useful when you need highly specific predictions based on known instances.
+- **Model-Based Learning** is more about **understanding** patterns and generalizing to make predictions on new data, which is critical in real-world applications where you can't rely solely on memorized examples.
+
+I hope this clarifies the difference between **instance-based** and **model-based** learning! Feel free to dive deeper into specific algorithms if you're interested in practical implementations.
