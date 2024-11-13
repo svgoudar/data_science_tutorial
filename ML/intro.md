@@ -156,9 +156,7 @@ In this video, we are going to explore the **equation of a straight line**, **3D
 ### 1. **Equation of a Straight Line**
 
 Let's start with a simple example involving a 2D space with axes $x$ and $y$. The equation of a straight line in 2D is typically given by:
-$
-y = mx + c
-$
+$y = mx + c$
 Here:
 
 - $m$ is the **slope** of the line, indicating how much $y$ changes for a unit change in $x$.
@@ -174,15 +172,11 @@ You've probably encountered this formula in high school. Let's briefly break it 
 The equation can also be written in other forms:
 
 1. **Standard Linear Form**:
-   $
-   ax + by + c = 0
-   $
+   $ax + by + c = 0$
    This can be rearranged into the slope-intercept form, $y = mx + c$.
 
-2. **Using Coefficients $\beta$**:
-   $
-   y = \beta_0 + \beta_1 x
-   $
+1. **Using Coefficients $\beta$**:
+   $y = \beta_0 + \beta_1 x$
    Here, $\beta_0$ is equivalent to the intercept $c$, and $\beta_1$ is the slope $m$.
 
 ### 2. **Equation of a Line in Multidimensional Space**
