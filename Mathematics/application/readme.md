@@ -166,8 +166,8 @@ $$
 
 ### Summary of Findings
 
-- When$\theta_1 = 0.5$, the cost function$J(0.5) \approx 0.5833$.
-- This indicates that with a slope of$0.5$, the fit is worse compared to the perfect fit achieved when$\theta_1 = 1$.
+- When$\theta_1 = 0.5$, the cost function $J(0.5) \approx 0.5833$.
+- This indicates that with a slope of$0.5$, the fit is worse compared to the perfect fit achieved when $\theta_1 = 1$.
 
 It looks like you're working through a detailed explanation of simple linear regression, focusing on the cost function, specifically the Mean Squared Error (MSE), and how to derive the best fit line based on different values of the slope ($\theta_1$). Here's a refined version of what you've shared, with a focus on clarity and key concepts:
 

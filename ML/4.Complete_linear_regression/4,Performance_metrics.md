@@ -10,10 +10,10 @@ $R^2 = 1 - \frac{\text{SS}_{\text{residual}}}{\text{SS}_{\text{total}}}$
 
 Where:
 
-- **SS$_{\text{residual}}$** (Sum of Squares of Residuals): Measures the total squared difference between the actual values ($y_i$) and the predicted values ($\hat{y}_i$) from the model.
+- **$SS_{\text{residual}}$** (Sum of Squares of Residuals): Measures the total squared difference between the actual values ($y_i$) and the predicted values ($\hat{y}_i$) from the model.
   
   $\text{SS}_{\text{residual}} = \sum (y_i - \hat{y}_i)^2$
-- **SS$_{\text{total}}$** (Total Sum of Squares): Measures the total squared difference between the actual values ($y_i$) and the mean of the actual values ($\bar{y}$).
+- **$SS_{\text{total}}$** (Total Sum of Squares): Measures the total squared difference between the actual values ($y_i$) and the mean of the actual values ($\bar{y}$).
   
   $\text{SS}_{\text{total}} = \sum (y_i - \bar{y})^2$
 
