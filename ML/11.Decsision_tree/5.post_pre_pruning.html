@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Problem Statement</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p>Hello everyone! In this video, we’ll discuss a very important topic: <strong>Pre-pruning</strong> and <strong>Post-pruning</strong> in Decision Trees.</p>
+<p>To begin, let’s understand the meaning of pruning. If you think of a gardener trimming plants to maintain their shape and promote healthy growth, pruning in decision trees works similarly. It helps improve the tree’s performance by avoiding unnecessary complexity.</p>
+<hr>
+<h3 id="problem-statement">Problem Statement</h3>
+<p>Suppose we have a training dataset and use a decision tree algorithm with its default parameters. The tree will keep splitting the data until it reaches the leaf nodes, ensuring all splits are pure.</p>
+<p>For instance:</p>
+<ul>
+<li>At one point, the split might result in a leaf node with 9 &quot;Yes&quot; and 2 &quot;No&quot; categories. However, the algorithm may continue splitting further, creating nodes like:
+<ul>
+<li>9 &quot;Yes&quot; and 0 &quot;No&quot;</li>
+<li>0 &quot;Yes&quot; and 2 &quot;No&quot;</li>
+</ul>
+</li>
+</ul>
+<p>While these splits are pure, they are unnecessary and lead to a common problem: <strong>overfitting</strong>.</p>
+<hr>
+<h3 id="overfitting-in-decision-trees">Overfitting in Decision Trees</h3>
+<p>Overfitting occurs when a decision tree learns the training data too well, including noise and irrelevant details. This results in:</p>
+<ol>
+<li><strong>High training accuracy</strong> but</li>
+<li><strong>Low test accuracy</strong>, making the model less generalizable.</li>
+</ol>
+<p>Overfitting can be characterized as:</p>
+<ul>
+<li><strong>Low Bias</strong> (good fit for training data)</li>
+<li><strong>High Variance</strong> (poor performance on test data)</li>
+</ul>
+<p>To address this issue, we use <strong>pruning techniques</strong>:</p>
+<ul>
+<li><strong>Post-pruning</strong></li>
+<li><strong>Pre-pruning</strong></li>
+</ul>
+<hr>
+<h3 id="post-pruning">Post-pruning</h3>
+<p><strong>Definition:</strong> In post-pruning, we first construct the complete decision tree and then prune it by removing unnecessary branches.</p>
+<h4 id="example">Example</h4>
+<ul>
+<li>If a split results in 9 &quot;Yes&quot; and 2 &quot;No&quot; categories, the tree can stop further splitting and make the output &quot;Yes&quot; directly. This avoids creating additional pure splits, saving computation and reducing overfitting.</li>
+</ul>
+<h4 id="steps">Steps</h4>
+<ol>
+<li><strong>Construct the complete decision tree</strong></li>
+<li><strong>Prune the tree</strong> by cutting branches based on certain criteria, such as depth or impurity thresholds.</li>
+</ol>
+<h4 id="advantages">Advantages</h4>
+<ul>
+<li>Suitable for <strong>smaller datasets</strong>, as building the entire tree for large datasets can be computationally expensive.</li>
+</ul>
+<hr>
+<h3 id="pre-pruning">Pre-pruning</h3>
+<p><strong>Definition:</strong> In pre-pruning, we prevent the tree from growing excessively by setting constraints during its construction. This involves tuning hyperparameters to limit the tree’s depth and complexity.</p>
+<h4 id="hyperparameters-to-tune">Hyperparameters to Tune</h4>
+<ul>
+<li><strong>max_depth</strong>: Maximum depth of the tree.</li>
+<li><strong>max_features</strong>: Maximum number of features to consider for a split.</li>
+<li><strong>min_samples_split</strong>: Minimum samples required to split a node.</li>
+<li><strong>min_samples_leaf</strong>: Minimum samples required to be at a leaf node.</li>
+<li><strong>criterion</strong>: The function to measure split quality (e.g., Gini, entropy).</li>
+</ul>
+<h4 id="how-to-perform-pre-pruning">How to Perform Pre-pruning</h4>
+<ol>
+<li>Use hyperparameter tuning techniques like <strong>GridSearchCV</strong> to find the optimal values for these parameters.</li>
+<li>Set these parameters before constructing the tree.</li>
+</ol>
+<h4 id="advantages-1">Advantages</h4>
+<ul>
+<li>More efficient for <strong>large datasets</strong>, as it avoids constructing the full tree.</li>
+<li>Reduces time complexity by controlling tree growth during construction.</li>
+</ul>
+<hr>
+<h3 id="key-differences">Key Differences</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Aspect</strong></th>
+<th><strong>Post-pruning</strong></th>
+<th><strong>Pre-pruning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Process</strong></td>
+<td>Build the full tree, then prune it</td>
+<td>Prune the tree during construction</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Small datasets</td>
+<td>Large datasets</td>
+</tr>
+<tr>
+<td><strong>Approach</strong></td>
+<td>Remove unnecessary branches post hoc</td>
+<td>Limit tree growth via hyperparameters</td>
+</tr>
+<tr>
+<td><strong>Computation</strong></td>
+<td>Higher time complexity</td>
+<td>Lower time complexity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="practical-demonstration">Practical Demonstration</h3>
+<p>Let’s quickly explore the relevant hyperparameters in the <strong>scikit-learn DecisionTreeClassifier</strong> documentation:</p>
+<ol>
+<li><strong>criterion</strong>: Options include Gini, entropy, and log loss.</li>
+<li><strong>splitter</strong>: Defines the strategy for choosing the split at each node (e.g., best or random).</li>
+<li><strong>max_depth</strong>: Limits the depth of the tree.</li>
+<li><strong>min_samples_split</strong>: Minimum samples required to split a node.</li>
+<li><strong>min_samples_leaf</strong>: Minimum samples required at a leaf node.</li>
+<li><strong>max_features</strong>: Number of features to consider for a split.</li>
+</ol>
+<p>These parameters allow fine-tuning to achieve optimal performance while avoiding overfitting.</p>
+<hr>
+<h3 id="summary">Summary</h3>
+<p>To reduce overfitting in decision trees, we can:</p>
+<ol>
+<li>Use <strong>Post-pruning</strong>: Construct the full tree and prune it afterward (best for small datasets).</li>
+<li>Use <strong>Pre-pruning</strong>: Limit tree growth during construction through hyperparameter tuning (best for large datasets).</li>
+</ol>
+<p>In the practical part of this session, we’ll demonstrate how these concepts work with a real dataset. Stay tuned!</p>
+<p>Thank you for watching, and I’ll see you in the next video!</p>
+
+            
+            
+        </body>
+        </html>
